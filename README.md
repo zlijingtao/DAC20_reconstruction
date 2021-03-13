@@ -49,20 +49,12 @@ CIFAR-10:
 ```bash
 bash BFA_stress_test_CIFAR10.sh
 ```
-
-############ directory to save result #############
-DATE=`date +%Y-%m-%d`
-  
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir ./save
-    mkdir ./save/${DATE}/
-fi
   
 ## Task list
   
 - [x] Upload Trained models for CIFAR-10 datasets.
   
-- [] Upload Trained models for ImageNet datasets.
+- [ ] Upload Trained models for ImageNet datasets.
   
   
   
