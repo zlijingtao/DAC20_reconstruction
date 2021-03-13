@@ -1,0 +1,8 @@
+*.log
+*.code-workspace
+.pyc
+.bak
+dataset/cifar-10-batches-py
+dataset/MNIST
+dataset/*.tar.gz
+__pycache__

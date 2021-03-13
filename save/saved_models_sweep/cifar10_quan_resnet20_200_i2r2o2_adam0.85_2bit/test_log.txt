@@ -1,0 +1,3333 @@
+Evaluate saved Model : /home/jingtao1/TNN/save/test/cifar10_quan_resnet20_200_i2r2o2_adam0.85_2bit/model_best.pth.tar
+{'AD_sigma': 0.0, 'DA_sigma': 0.0, 'arch': 'quan_resnet20', 'attack_sample_size': 128, 'batch_size': 128, 'data_path': './dataset/', 'dataset': 'cifar10', 'enable_bfa': True, 'enable_oneshot': False, 'enable_rfa': False, 'evaluate': False, 'gpu_id': 0, 'input_M2D': 0.85, 'input_grain_size': [1, 2], 'input_num_bits': 2, 'k_top': 40, 'manualSeed': 5000, 'n_iter': 20, 'ngpu': 1, 'output_M2D': 0.85, 'output_grain_size': [1, 2], 'output_num_bits': 2, 'res_M2D': 0.85, 'res_grain_size': [1, 2], 'res_num_bits': 2, 'reset_weight': True, 'resume': '/home/jingtao1/TNN/save/test/cifar10_quan_resnet20_200_i2r2o2_adam0.85_2bit/model_best.pth.tar', 'update_mask_flag': False, 'use_cuda': True, 'workers': 4}
+python version : 3.6.9 |Anaconda, Inc.| (default, Jul 30 2019, 19:07:31)  [GCC 7.3.0]
+torch  version : 1.1.0
+cudnn  version : 7600
+=> creating model 'quan_resnet20'
+=> loading checkpoint '/home/jingtao1/TNN/save/test/cifar10_quan_resnet20_200_i2r2o2_adam0.85_2bit/model_best.pth.tar'
+=> loaded checkpoint '/home/jingtao1/TNN/save/test/cifar10_quan_resnet20_200_i2r2o2_adam0.85_2bit/model_best.pth.tar'
+=> Seed is 25
+  **Test** Prec@1 89.920 Prec@5 99.560 Loss 0.3335 Error@1 10.080
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.279 (0.279)  [2019-11-24 23:30:09]
+loss before attack: 0.0652
+loss after attack: 0.0810
+bit flips: 1
+hamming_dist: 0
+  **Test** Prec@1 89.820 Prec@5 99.560 Loss 0.3349 Error@1 10.180
+iteration Time 1.794 (1.794)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([1.6823e-05, 1.3638e-05, 5.0530e-06, 1.9738e-05, 9.3696e-06, 8.5695e-05,
+        2.2667e-05, 2.1470e-06, 3.1775e-05, 1.4575e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-36.,  36.,  36., -36., -36.,  36.,  36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([-36.,  36.,  36., -36., -36., 108., 108., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+18.0
+Deviation Value prior to Attacking Point
+tensor([ 17.,  19., -19.,  19., -19., -19.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 17.,  19., -19.,  19., -19.,  18.,  -3., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [002/020]   Attack Time 0.222 (0.250)  [2019-11-24 23:30:11]
+loss before attack: 0.0810
+loss after attack: 0.1047
+bit flips: 2
+hamming_dist: 0
+  **Test** Prec@1 89.720 Prec@5 99.530 Loss 0.3403 Error@1 10.280
+iteration Time 1.914 (1.854)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 2.0768e-04, 0.0000e+00, 4.6120e-05, 2.2706e-04,
+        1.6360e-05, 6.9699e-05, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+-108.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  -36.,  -36., -108., -108., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108., -108., -108., -108., -108., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-8.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -10., -19., -19.,  19., -13.,  -9., -19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -10., -19., -18.,  -8., -13.,  -9., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [003/020]   Attack Time 0.220 (0.240)  [2019-11-24 23:30:14]
+loss before attack: 0.1047
+loss after attack: 0.1237
+bit flips: 3
+hamming_dist: 0
+  **Test** Prec@1 89.600 Prec@5 99.560 Loss 0.3389 Error@1 10.400
+iteration Time 1.982 (1.897)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([3.4950e-06, 1.9140e-05, 0.0000e+00, 3.2148e-05, 0.0000e+00, 1.0069e-04,
+        0.0000e+00, 0.0000e+00, 0.0000e+00, 3.3158e-06], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,  108.,  108.,  108.,  108., -108., -108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,  108.,  108.,   36.,   36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+4.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -17.,  19.,  -9.,  19.,   4., -19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -17.,  19.,  -9.,  19., -19., -19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [004/020]   Attack Time 0.214 (0.234)  [2019-11-24 23:30:16]
+loss before attack: 0.1237
+loss after attack: 0.1467
+bit flips: 4
+hamming_dist: 0
+  **Test** Prec@1 89.410 Prec@5 99.530 Loss 0.3471 Error@1 10.590
+iteration Time 2.080 (1.942)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([2.3103e-05, 6.7672e-05, 0.0000e+00, 2.7473e-05, 8.4431e-05, 2.6119e-04,
+        3.2465e-05, 0.0000e+00, 4.6397e-05, 3.8265e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36.,   36., -108., -108.,   36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,  19.,  19., -19.,  19., -18.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,  19.,  19., -19.,  19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [005/020]   Attack Time 0.224 (0.232)  [2019-11-24 23:30:18]
+loss before attack: 0.1467
+loss after attack: 0.1842
+bit flips: 5
+hamming_dist: 0
+  **Test** Prec@1 88.710 Prec@5 99.520 Loss 0.3763 Error@1 11.290
+iteration Time 1.952 (1.944)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([4.0256e-05, 0.0000e+00, 0.0000e+00, 3.2894e-05, 0.0000e+00, 3.7001e-04,
+        4.2265e-05, 7.4430e-05, 5.7616e-05, 7.4986e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,   36.,   36., -108., -108.,  -36.,  -36.,   36.,   36.,  108.],
+       device='cuda:0')
+------------
+tensor([ -36.,   36.,   36., -108., -108.,   36.,   36.,   36.,   36.,  108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+6.0
+Deviation Value prior to Attacking Point
+tensor([-16.,  19., -19.,  19., -19., -19.,  19., -19.,  19., -12.],
+       device='cuda:0')
+------------
+tensor([-16.,  19., -19.,  19., -19.,   6.,  -5., -19.,  19., -12.],
+       device='cuda:0')
+**********************************
+Iteration: [006/020]   Attack Time 0.214 (0.229)  [2019-11-24 23:30:20]
+loss before attack: 0.1842
+loss after attack: 0.2269
+bit flips: 6
+hamming_dist: 0
+  **Test** Prec@1 87.240 Prec@5 99.340 Loss 0.4398 Error@1 12.760
+iteration Time 1.835 (1.926)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([6.5176e-05, 0.0000e+00, 1.9217e-05, 4.2370e-07, 0.0000e+00, 3.9878e-04,
+        6.9024e-05, 1.5633e-04, 5.2102e-05, 4.4446e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,  108.,  108., -108., -108.,   36.,   36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36., 108., 108., -36., -36.,  36.,  36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-6.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19., -19.,  14.,  19.,  -6.,  11.,  19., -11., -19.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19., -19.,  14.,  19.,  19., -19.,  19., -11., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [007/020]   Attack Time 0.216 (0.227)  [2019-11-24 23:30:22]
+loss before attack: 0.2269
+loss after attack: 0.2510
+bit flips: 7
+hamming_dist: 0
+  **Test** Prec@1 86.420 Prec@5 99.320 Loss 0.4667 Error@1 13.580
+iteration Time 2.076 (1.947)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([2.5381e-05, 9.2070e-05, 9.2548e-05, 2.7745e-05, 6.3180e-05, 2.2470e-04,
+        4.4126e-05, 1.3938e-06, 1.3844e-04, 4.7431e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36., -36., 108., 108., -36., -36., -36., -36., 108.],
+       device='cuda:0')
+------------
+tensor([-36., -36., -36., 108., 108.,  36.,  36., -36., -36., 108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-8.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19.,  19., -14., -19., -19.,  19.,  19., -19.,  14.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19.,  19., -14., -19.,  -8.,  19.,  19., -19.,  14.],
+       device='cuda:0')
+**********************************
+Iteration: [008/020]   Attack Time 0.224 (0.227)  [2019-11-24 23:30:25]
+loss before attack: 0.2510
+loss after attack: 0.3032
+bit flips: 8
+hamming_dist: 0
+  **Test** Prec@1 84.000 Prec@5 99.080 Loss 0.5617 Error@1 16.000
+iteration Time 1.968 (1.950)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([1.1387e-04, 2.4241e-05, 3.4047e-05, 9.4263e-06, 5.5661e-05, 5.8827e-04,
+        5.2906e-05, 9.9639e-05, 6.7541e-08, 9.4476e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([108.,  36.,  36., -36., -36., -36., -36., -36., -36.,  36.],
+       device='cuda:0')
+------------
+tensor([108.,  36.,  36., -36., -36.,  36.,  36., -36., -36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19., -19.,  19., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19., -19.,  19., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [009/020]   Attack Time 0.222 (0.226)  [2019-11-24 23:30:27]
+loss before attack: 0.3032
+loss after attack: 0.3497
+bit flips: 9
+hamming_dist: 0
+  **Test** Prec@1 82.620 Prec@5 98.880 Loss 0.6278 Error@1 17.380
+iteration Time 1.944 (1.949)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([2.2819e-04, 9.5490e-05, 4.3756e-05, 3.6949e-05, 0.0000e+00, 1.0166e-03,
+        2.5368e-06, 2.9334e-04, 3.7018e-05, 2.2063e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -17.,  19., -19.,  19., -19.,  19.,  10.,  -7.,  19.],
+       device='cuda:0')
+------------
+tensor([-19., -17.,  19., -19.,  19.,  19.,  19.,  10.,  -7.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [010/020]   Attack Time 0.216 (0.225)  [2019-11-24 23:30:29]
+loss before attack: 0.3497
+loss after attack: 0.4060
+bit flips: 10
+hamming_dist: 0
+  **Test** Prec@1 81.150 Prec@5 98.720 Loss 0.6862 Error@1 18.850
+iteration Time 2.102 (1.965)
+Attacking which layer:
+stage_1.1.conv_a
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 2.8356e-04, 2.3156e-04, 8.3109e-05, 2.3089e-04, 6.2189e-04,
+        6.6044e-05, 2.2850e-05, 1.2374e-04, 5.4689e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36., -36., -36.,  36.,  36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36., -36., -36., 108., 108., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-18.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  -2., -19.,  19., -19.,  19., -19.,   1., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  -2., -19.,  19., -18., -19., -19.,   1., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [011/020]   Attack Time 0.229 (0.225)  [2019-11-24 23:30:31]
+loss before attack: 0.4060
+loss after attack: 0.4658
+bit flips: 11
+hamming_dist: 0
+  **Test** Prec@1 79.930 Prec@5 98.450 Loss 0.7599 Error@1 20.070
+iteration Time 2.187 (1.985)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 0.0000e+00, 7.6763e-05, 1.1906e-04, 5.3449e-04,
+        5.5197e-05, 0.0000e+00, 2.1705e-04, 4.1702e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36., -36., -36., -36., -36.,  36.,  36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36., -36., -36.,  36.,  36.,  36.,  36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+5.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19.,   5., -19.,  19.,  19., -19.,  -6.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19.,   5.,   5., -19.,  19., -19.,  -6.],
+       device='cuda:0')
+**********************************
+Iteration: [012/020]   Attack Time 0.222 (0.225)  [2019-11-24 23:30:34]
+loss before attack: 0.4658
+loss after attack: 0.5266
+bit flips: 12
+hamming_dist: 0
+  **Test** Prec@1 78.630 Prec@5 98.280 Loss 0.8178 Error@1 21.370
+iteration Time 1.943 (1.981)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([3.1885e-05, 1.0535e-04, 1.4179e-04, 3.2979e-05, 3.3287e-04, 7.2909e-04,
+        1.2636e-04, 6.3379e-05, 2.5421e-04, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-36.,  36.,  36., 108., 108.,  36.,  36., -36., -36., 108.],
+       device='cuda:0')
+------------
+tensor([-36.,  36.,  36., 108., 108., 108., 108., -36., -36., 108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,  19.,   0., -19., -19.,  19.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,  19.,   0., -19., -19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [013/020]   Attack Time 0.218 (0.225)  [2019-11-24 23:30:36]
+loss before attack: 0.5266
+loss after attack: 0.6305
+bit flips: 13
+hamming_dist: 0
+  **Test** Prec@1 75.890 Prec@5 97.840 Loss 0.9252 Error@1 24.110
+iteration Time 2.048 (1.987)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([6.1680e-06, 3.3939e-05, 2.0603e-04, 3.4806e-05, 4.1384e-04, 8.3826e-04,
+        1.0588e-04, 7.2679e-05, 1.8035e-04, 4.3031e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-108.,  -36.,  -36.,   36.,   36.,   36.,   36., -108., -108.,  108.],
+       device='cuda:0')
+------------
+tensor([-108.,  -36.,  -36.,   36.,   36.,  108.,  108., -108., -108.,  108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+7.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19.,  10., -19.,  19., -19.,  19.,  19., -14.,  -2.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19.,  10., -19.,  19.,   7.,   6.,  19., -14.,  -2.],
+       device='cuda:0')
+**********************************
+Iteration: [014/020]   Attack Time 0.217 (0.224)  [2019-11-24 23:30:38]
+loss before attack: 0.6305
+loss after attack: 0.7209
+bit flips: 14
+hamming_dist: 0
+  **Test** Prec@1 73.930 Prec@5 97.430 Loss 1.0146 Error@1 26.070
+iteration Time 2.329 (2.011)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([3.7336e-06, 1.2278e-04, 1.4847e-04, 2.5073e-05, 5.0243e-04, 1.0733e-03,
+        0.0000e+00, 7.2325e-05, 1.5562e-04, 6.6304e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36., 108.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36., 108., 108., -36., -36., 108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,   8., -19., -19.,  19., -19.,  19.,  19., -19.,   1.],
+       device='cuda:0')
+------------
+tensor([-19.,   8., -19., -19.,  19., -19.,  19.,  19., -19.,   1.],
+       device='cuda:0')
+**********************************
+Iteration: [015/020]   Attack Time 0.208 (0.223)  [2019-11-24 23:30:41]
+loss before attack: 0.7209
+loss after attack: 0.8156
+bit flips: 15
+hamming_dist: 0
+  **Test** Prec@1 72.270 Prec@5 97.020 Loss 1.1042 Error@1 27.730
+iteration Time 2.126 (2.019)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([5.0926e-05, 1.8348e-06, 0.0000e+00, 0.0000e+00, 4.5767e-05, 1.0817e-03,
+        0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,   36.,   36.,   36.,   36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,  -36.,  -36.,   36.,   36.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -19., -19., -19.,  19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -19., -19., -19.,  19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [016/020]   Attack Time 0.216 (0.223)  [2019-11-24 23:30:43]
+loss before attack: 0.8156
+loss after attack: 0.9400
+bit flips: 16
+hamming_dist: 0
+  **Test** Prec@1 70.140 Prec@5 96.510 Loss 1.2130 Error@1 29.860
+iteration Time 1.876 (2.010)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([4.4042e-05, 3.6893e-05, 0.0000e+00, 3.4857e-04, 0.0000e+00, 1.3713e-03,
+        7.0169e-05, 2.4417e-04, 0.0000e+00, 5.0138e-04], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,  -36.,  -36.,  108.,  108.,   36.,   36., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,  -36.,  -36.,   36.,   36.,   36.,   36., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19.,  19., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19.,  19., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [017/020]   Attack Time 0.221 (0.222)  [2019-11-24 23:30:45]
+loss before attack: 0.9400
+loss after attack: 1.0484
+bit flips: 17
+hamming_dist: 0
+  **Test** Prec@1 68.050 Prec@5 96.030 Loss 1.3240 Error@1 31.950
+iteration Time 1.901 (2.003)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([1.4438e-05, 2.4737e-04, 5.9470e-04, 1.8490e-04, 8.1581e-04, 1.3066e-03,
+        1.4918e-04, 6.4603e-05, 9.1364e-05, 9.7410e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-36.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36., 108.],
+       device='cuda:0')
+------------
+tensor([-36.,  36.,  36.,  36.,  36., 108., 108., -36., -36., 108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,   8., -19.,  19., -19.,  19.,  19., -19.,  12.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,   8., -19.,  19., -19.,   7.,  19., -19.,  12.],
+       device='cuda:0')
+**********************************
+Iteration: [018/020]   Attack Time 0.216 (0.222)  [2019-11-24 23:30:47]
+loss before attack: 1.0484
+loss after attack: 1.1556
+bit flips: 18
+hamming_dist: 0
+  **Test** Prec@1 65.960 Prec@5 95.670 Loss 1.4288 Error@1 34.040
+iteration Time 1.935 (2.000)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([2.3797e-07, 2.4191e-04, 5.0400e-04, 1.8186e-04, 7.3883e-04, 1.2256e-03,
+        1.1957e-04, 5.0931e-05, 3.4388e-05, 8.5347e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([108.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([108.,  36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -10., -19.,   0.,  -6., -19.,  19.,  -4.,   5.,  19.],
+       device='cuda:0')
+------------
+tensor([-19., -10., -19.,   0.,  -6., -19.,  19.,  -4.,   5.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [019/020]   Attack Time 0.220 (0.222)  [2019-11-24 23:30:49]
+loss before attack: 1.1556
+loss after attack: 1.2503
+bit flips: 19
+hamming_dist: 0
+  **Test** Prec@1 64.060 Prec@5 95.590 Loss 1.5488 Error@1 35.940
+iteration Time 2.204 (2.010)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([4.7937e-05, 5.1610e-05, 0.0000e+00, 7.2235e-06, 2.1661e-04, 4.2707e-04,
+        0.0000e+00, 3.5705e-05, 9.1024e-05, 1.1690e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108., -108., -108.,  -36.,  -36.,  108.,  108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108., -108., -108., -108.,   36.,   36.,  108.,  108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+0.0
+Deviation Value prior to Attacking Point
+tensor([ -5.,  19., -19.,  -5.,  19., -19.,  19., -19.,   4., -19.],
+       device='cuda:0')
+------------
+tensor([ -5.,  19., -19.,  -5.,  19.,   0.,  19., -19.,   4., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [020/020]   Attack Time 0.220 (0.222)  [2019-11-24 23:30:52]
+loss before attack: 1.2503
+loss after attack: 1.4086
+bit flips: 20
+hamming_dist: 0
+  **Test** Prec@1 62.010 Prec@5 95.040 Loss 1.6723 Error@1 37.990
+iteration Time 2.043 (2.012)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([0.0003, 0.0007, 0.0008, 0.0006, 0.0007, 0.0014, 0.0004, 0.0004, 0.0007,
+        0.0004], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., 108., 108., -36., -36., -36., -36., -36., -36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., 108., 108., -36., -36.,  36.,  36., -36., -36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-14.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  -9.,  -1.,  19., -19., -14.,  12.,  11.,  19., -14.],
+       device='cuda:0')
+------------
+tensor([-19.,  -9.,  -1.,  19., -19.,  19., -19.,  11.,  19., -14.],
+       device='cuda:0')
+=> Running Accuracy is [89.82, 89.72, 89.6, 89.41, 88.71, 87.24, 86.42, 84.0, 82.62, 81.15, 79.93, 78.63, 75.89, 73.93, 72.27, 70.14, 68.05, 65.96, 64.06, 62.01]
+=> Running Loss is [0.33491530232429506, 0.3403080816268921, 0.33890084834098816, 0.3470525246143341, 0.3762576962471008, 0.4398127417564392, 0.46674309997558594, 0.5616707489013671, 0.6277895323753357, 0.6862435043334961, 0.7598591989517212, 0.8178033378601074, 0.925164299583435, 1.0145996000289916, 1.1041776678085327, 1.2130264110565185, 1.3239869304656982, 1.4288075452804565, 1.5488311058044433, 1.6722739246368408]
+=> Seed is 678
+  **Test** Prec@1 89.920 Prec@5 99.560 Loss 0.3335 Error@1 10.080
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.212 (0.212)  [2019-11-24 23:30:57]
+loss before attack: 0.0825
+loss after attack: 0.1033
+bit flips: 1
+hamming_dist: 0
+  **Test** Prec@1 89.720 Prec@5 99.540 Loss 0.3379 Error@1 10.280
+iteration Time 2.161 (2.161)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([6.6035e-05, 4.2145e-06, 4.3162e-06, 1.2822e-05, 6.6776e-06, 6.6013e-05,
+        4.5554e-05, 3.7276e-07, 3.6723e-06, 3.7424e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36., -108., -108.,  -36.,  -36.,  108.,  108., -108., -108.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36., -108., -108.,  -36.,  -36.,   36.,   36., -108., -108.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+12.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -14.,  19., -19.,  12.,  18.,   4., -18.,  19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -14.,  19., -19., -19.,  19.,   4., -18.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [002/020]   Attack Time 0.216 (0.214)  [2019-11-24 23:30:59]
+loss before attack: 0.1033
+loss after attack: 0.1239
+bit flips: 2
+hamming_dist: 0
+  **Test** Prec@1 89.580 Prec@5 99.520 Loss 0.3451 Error@1 10.420
+iteration Time 1.913 (2.037)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([3.2824e-05, 1.6554e-05, 5.3334e-05, 2.0938e-05, 2.1596e-04, 1.3667e-04,
+        1.0451e-06, 4.0511e-05, 1.2369e-04, 9.9809e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108.,  -36.,  -36.,  108.,  108., -108., -108.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([-108., -108.,  -36.,  -36.,  -36.,  -36., -108., -108.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+18.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -14.,  19., -19.,  12.,  18.,   4., -18.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -14.,  19., -19.,  19.,  19.,   4., -18.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [003/020]   Attack Time 0.219 (0.216)  [2019-11-24 23:31:01]
+loss before attack: 0.1239
+loss after attack: 0.1465
+bit flips: 3
+hamming_dist: 0
+  **Test** Prec@1 89.460 Prec@5 99.490 Loss 0.3523 Error@1 10.540
+iteration Time 1.870 (1.982)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([1.3851e-05, 1.4221e-05, 2.9086e-05, 0.0000e+00, 9.4363e-06, 1.9924e-04,
+        4.0452e-06, 8.1637e-09, 5.8304e-07, 8.0447e-06], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36., -36., -36., 108., 108., -36., -36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36., -36., -36.,  36.,  36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+10.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 10., -19.,  19., -19., -12.,  10.,  19., -11.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 10., -19.,  19., -19.,  19., -19.,  19., -11.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [004/020]   Attack Time 0.211 (0.215)  [2019-11-24 23:31:03]
+loss before attack: 0.1465
+loss after attack: 0.1695
+bit flips: 4
+hamming_dist: 0
+  **Test** Prec@1 89.170 Prec@5 99.480 Loss 0.3621 Error@1 10.830
+iteration Time 2.269 (2.053)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([3.2578e-05, 6.8009e-05, 1.2082e-04, 1.2659e-04, 9.7298e-05, 2.5892e-04,
+        8.4997e-05, 2.5148e-05, 0.0000e+00, 3.4661e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36., -36., -36., 108., 108.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36., -36., -36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+4.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([  3.,  19.,  19., -19.,   2.,   4.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([  3.,  19.,  19., -19.,  19., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [005/020]   Attack Time 0.232 (0.218)  [2019-11-24 23:31:06]
+loss before attack: 0.1695
+loss after attack: 0.1925
+bit flips: 5
+hamming_dist: 0
+  **Test** Prec@1 88.980 Prec@5 99.480 Loss 0.3733 Error@1 11.020
+iteration Time 1.829 (2.009)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([4.6718e-06, 5.6603e-05, 6.3445e-05, 6.0316e-05, 6.8167e-05, 1.9828e-04,
+        2.5710e-06, 1.5394e-05, 4.0797e-05, 1.0847e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36., -108., -108.,  -36.,  -36., -108., -108.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36., -108., -108.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-9.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,   1.,  -9.,  19., -19.,  -9.,  19.,  19.,  -4., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,   1.,  -9.,  19., -19.,  19.,  -5.,  19.,  -4., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [006/020]   Attack Time 0.217 (0.218)  [2019-11-24 23:31:08]
+loss before attack: 0.1925
+loss after attack: 0.2179
+bit flips: 6
+hamming_dist: 0
+  **Test** Prec@1 88.630 Prec@5 99.380 Loss 0.3929 Error@1 11.370
+iteration Time 2.000 (2.007)
+Attacking which layer:
+stage_2.0.conv_b
+Gradient Value at Attacking layer:
+tensor([5.6926e-05, 2.6178e-05, 4.9347e-06, 3.9752e-06, 8.2195e-06, 1.9569e-04,
+        3.2431e-05, 1.3188e-04, 8.7476e-05, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108.,   36.,   36., -108., -108.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([-108., -108.,   36.,   36.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-10.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  -6., -19., -13., -12., -10., -19.,  19.,  -1.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19.,  -6., -19., -13., -19.,  19., -19.,  19.,  -1.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [007/020]   Attack Time 0.223 (0.219)  [2019-11-24 23:31:10]
+loss before attack: 0.2179
+loss after attack: 0.2486
+bit flips: 7
+hamming_dist: 0
+  **Test** Prec@1 88.290 Prec@5 99.310 Loss 0.4105 Error@1 11.710
+iteration Time 1.860 (1.986)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([6.2917e-06, 1.0731e-04, 9.4878e-05, 0.0000e+00, 1.0914e-04, 2.9973e-04,
+        1.4187e-05, 2.1734e-05, 5.1051e-05, 1.1542e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108.,  -36.,  -36.,   36.,   36., -108., -108.,  -36.,  -36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108.,  -36.,  -36.,   36.,   36.,  -36.,  -36.,  -36.,  -36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+5.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ -6., -13.,  19.,  19., -19.,   5.,  19.,  19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([ -6., -13.,  19.,  19., -19.,  19., -19.,  19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [008/020]   Attack Time 0.228 (0.220)  [2019-11-24 23:31:12]
+loss before attack: 0.2486
+loss after attack: 0.2902
+bit flips: 8
+hamming_dist: 0
+  **Test** Prec@1 87.670 Prec@5 99.220 Loss 0.4292 Error@1 12.330
+iteration Time 2.315 (2.027)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([4.1273e-05, 1.4184e-05, 3.2154e-05, 1.0590e-04, 2.9715e-05, 3.4384e-04,
+        3.4634e-06, 2.2669e-04, 2.3850e-05, 2.1071e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,   36.,   36.,   36.,   36., -108., -108., -108., -108.,   36.],
+       device='cuda:0')
+------------
+tensor([ -36.,   36.,   36.,   36.,   36.,  -36.,  -36., -108., -108.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-14.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 13., -19.,  19., -19.,  19., -14., -12.,   8.,   9.,  19.],
+       device='cuda:0')
+------------
+tensor([ 13., -19.,  19., -19.,  19.,  19., -19.,   8.,   9.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [009/020]   Attack Time 0.208 (0.219)  [2019-11-24 23:31:14]
+loss before attack: 0.2902
+loss after attack: 0.3301
+bit flips: 9
+hamming_dist: 0
+  **Test** Prec@1 87.230 Prec@5 99.120 Loss 0.4509 Error@1 12.770
+iteration Time 1.883 (2.011)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([3.8634e-05, 1.0186e-04, 1.5326e-04, 4.6015e-05, 1.8071e-04, 4.4348e-04,
+        2.7190e-06, 6.8716e-05, 6.0547e-05, 1.7210e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,  -36.,  -36.,  -36.,  -36., -108., -108.,   36.,   36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36., -36., -36., -36., -36., -36., -36.,  36.,  36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+9.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -14., -19., -19.,  19.,   9.,  19.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -14., -19., -19.,  19.,  19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [010/020]   Attack Time 0.211 (0.218)  [2019-11-24 23:31:17]
+loss before attack: 0.3301
+loss after attack: 0.3918
+bit flips: 10
+hamming_dist: 0
+  **Test** Prec@1 86.560 Prec@5 98.960 Loss 0.4838 Error@1 13.440
+iteration Time 1.882 (1.998)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 2.5537e-04, 3.3956e-05, 1.9376e-04, 5.1570e-04,
+        1.8660e-05, 0.0000e+00, 0.0000e+00, 1.7125e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36., -108., -108., -108., -108.,   36.,   36.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36., -108., -108.,  -36.,  -36.,   36.,   36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-13.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19., -19.,  11.,  19., -13., -10.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19., -19.,  11.,  19.,  19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [011/020]   Attack Time 0.222 (0.218)  [2019-11-24 23:31:19]
+loss before attack: 0.3918
+loss after attack: 0.4431
+bit flips: 11
+hamming_dist: 0
+  **Test** Prec@1 86.050 Prec@5 98.920 Loss 0.5085 Error@1 13.950
+iteration Time 2.093 (2.007)
+Attacking which layer:
+stage_2.2.conv_a
+Gradient Value at Attacking layer:
+tensor([2.2442e-04, 2.0969e-04, 1.4898e-04, 0.0000e+00, 0.0000e+00, 3.5590e-04,
+        0.0000e+00, 2.0481e-05, 0.0000e+00, 3.6380e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([ 36., -36., -36.,  36.,  36.,  36.,  36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36., -36., -36.,  36.,  36., 108., 108., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+2.0
+Deviation Value prior to Attacking Point
+tensor([  1., -19.,  19., -19.,  19., -19.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([  1., -19.,  19., -19.,  19.,   2.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [012/020]   Attack Time 0.220 (0.218)  [2019-11-24 23:31:21]
+loss before attack: 0.4431
+loss after attack: 0.5202
+bit flips: 12
+hamming_dist: 0
+  **Test** Prec@1 85.020 Prec@5 98.720 Loss 0.5505 Error@1 14.980
+iteration Time 1.993 (2.006)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 1.6116e-04, 3.5884e-04, 3.1214e-05, 3.0788e-04, 7.2598e-04,
+        8.6494e-06, 2.0338e-04, 8.1214e-05, 2.7061e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,  -36.,  -36., -108., -108.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36., -36., -36., -36., -36., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-7.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19., -19.,   8.,  19.,  -7.,  -2.,  19.,  -4.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19., -19.,   8.,  19.,  19., -19.,  19.,  -4.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [013/020]   Attack Time 0.223 (0.219)  [2019-11-24 23:31:23]
+loss before attack: 0.5202
+loss after attack: 0.6038
+bit flips: 13
+hamming_dist: 0
+  **Test** Prec@1 84.170 Prec@5 98.460 Loss 0.5958 Error@1 15.830
+iteration Time 2.079 (2.011)
+Attacking which layer:
+stage_2.2.conv_a
+Gradient Value at Attacking layer:
+tensor([3.1439e-04, 2.7114e-04, 2.3436e-04, 1.2165e-04, 0.0000e+00, 5.7643e-04,
+        1.7288e-04, 1.9800e-05, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([108.,  36.,  36.,  36.,  36., -36., -36., -36., -36.,  36.],
+       device='cuda:0')
+------------
+tensor([108.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([  2., -19.,  19., -19.,  19., -19.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([  2., -19.,  19., -19.,  19.,  19., -19., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [014/020]   Attack Time 0.218 (0.219)  [2019-11-24 23:31:26]
+loss before attack: 0.6038
+loss after attack: 0.6959
+bit flips: 14
+hamming_dist: 0
+  **Test** Prec@1 82.910 Prec@5 98.070 Loss 0.6529 Error@1 17.090
+iteration Time 2.141 (2.021)
+Attacking which layer:
+stage_2.2.conv_a
+Gradient Value at Attacking layer:
+tensor([2.5568e-04, 2.6272e-04, 3.0456e-04, 1.2570e-04, 5.6752e-05, 7.9171e-04,
+        1.9355e-04, 5.9375e-05, 0.0000e+00, 5.0929e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.,  36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-3.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19.,  -7.,  19.,  -3.,  19., -19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19.,  -7.,  19.,  19., -19., -19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [015/020]   Attack Time 0.220 (0.219)  [2019-11-24 23:31:28]
+loss before attack: 0.6959
+loss after attack: 0.7682
+bit flips: 15
+hamming_dist: 0
+  **Test** Prec@1 81.930 Prec@5 97.880 Loss 0.7014 Error@1 18.070
+iteration Time 1.974 (2.017)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([2.2786e-05, 0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 7.0613e-04,
+        2.7450e-04, 1.6409e-04, 4.6310e-04, 3.1036e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108., -108.,   36.,   36.,   36.,   36.,   36.,   36.,  -36.],
+       device='cuda:0')
+------------
+tensor([-108., -108., -108.,   36.,   36.,  -36.,  -36.,   36.,   36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ -9., -19., -19.,  19., -19.,  19., -19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([ -9., -19., -19.,  19., -19., -19., -14., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [016/020]   Attack Time 0.212 (0.218)  [2019-11-24 23:31:30]
+loss before attack: 0.7682
+loss after attack: 0.8395
+bit flips: 16
+hamming_dist: 0
+  **Test** Prec@1 81.170 Prec@5 97.670 Loss 0.7466 Error@1 18.830
+iteration Time 1.919 (2.011)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([3.0350e-04, 1.1641e-04, 0.0000e+00, 0.0000e+00, 9.8495e-05, 9.5981e-04,
+        4.8745e-04, 4.5352e-05, 1.2748e-04, 4.2087e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  -36.,  -36.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-15.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -19., -19.,  19., -19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -19., -19.,  19., -15., -19.,  19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [017/020]   Attack Time 0.226 (0.219)  [2019-11-24 23:31:32]
+loss before attack: 0.8395
+loss after attack: 0.9660
+bit flips: 17
+hamming_dist: 0
+  **Test** Prec@1 79.690 Prec@5 97.230 Loss 0.8285 Error@1 20.310
+iteration Time 2.142 (2.019)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([4.1256e-04, 1.0570e-04, 3.4098e-04, 5.6005e-04, 1.2218e-04, 1.0910e-03,
+        4.5296e-04, 9.3492e-05, 1.2214e-04, 3.3123e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36., -108., -108.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ -36.,  -36., -108., -108.,   36.,   36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,  11.,  19.,  10., -19.,   0., -19., -12.,   1.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,  11.,  19., -19.,  19.,   0., -19., -12.,   1.],
+       device='cuda:0')
+**********************************
+Iteration: [018/020]   Attack Time 0.217 (0.219)  [2019-11-24 23:31:35]
+loss before attack: 0.9660
+loss after attack: 1.0568
+bit flips: 18
+hamming_dist: 0
+  **Test** Prec@1 78.630 Prec@5 96.910 Loss 0.8874 Error@1 21.370
+iteration Time 1.838 (2.009)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([4.7143e-04, 6.3433e-05, 2.9539e-04, 6.0461e-04, 1.2603e-04, 1.2277e-03,
+        3.3913e-04, 6.0809e-05, 1.2278e-04, 3.6194e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36., -108., -108.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ -36.,  -36., -108., -108.,   36.,   36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-13.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  18.,  19.,  19., -19.,   4., -18.,  19.,  11.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  18.,  19.,  19., -13.,   4., -18.,  19.,  11.],
+       device='cuda:0')
+**********************************
+Iteration: [019/020]   Attack Time 0.213 (0.218)  [2019-11-24 23:31:37]
+loss before attack: 1.0568
+loss after attack: 1.1565
+bit flips: 19
+hamming_dist: 0
+  **Test** Prec@1 77.320 Prec@5 96.420 Loss 0.9709 Error@1 22.680
+iteration Time 2.082 (2.013)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0000, 0.0000, 0.0003, 0.0001, 0.0005, 0.0008, 0.0000, 0.0002, 0.0004,
+        0.0005], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+-108.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,  -36.,  -36., -108., -108.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-13.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,   5., -19.,  19.,  19., -19.,  -6.,  19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,   5.,  19., -13.,  19., -19.,  -6.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [020/020]   Attack Time 0.211 (0.218)  [2019-11-24 23:31:39]
+loss before attack: 1.1565
+loss after attack: 1.2685
+bit flips: 20
+hamming_dist: 0
+  **Test** Prec@1 75.890 Prec@5 96.140 Loss 1.0570 Error@1 24.110
+iteration Time 2.030 (2.014)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0002, 0.0000, 0.0000, 0.0001, 0.0005, 0.0012, 0.0003, 0.0000, 0.0003,
+        0.0000], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  108.,  108., -108., -108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+9.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  -6.,   6.,   9.,   2., -19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  -6.,  19., -19.,   2., -19., -19.,  19.],
+       device='cuda:0')
+=> Running Accuracy is [89.72, 89.58, 89.46, 89.17, 88.98, 88.63, 88.29, 87.67, 87.23, 86.56, 86.05, 85.02, 84.17, 82.91, 81.93, 81.17, 79.69, 78.63, 77.32, 75.89]
+=> Running Loss is [0.3379106698989868, 0.34506459040641785, 0.3522820004940033, 0.36212655091285706, 0.3733068926811218, 0.3928992828845978, 0.41051117744445803, 0.42919458808898925, 0.4509321880340576, 0.4837618977546692, 0.5085183782577515, 0.5505021078109741, 0.5958110118865967, 0.652888724899292, 0.7014469292640686, 0.74657895860672, 0.8285260342597961, 0.8873659750938415, 0.9709397050857544, 1.0569830307006836]
+=> Seed is 5002
+  **Test** Prec@1 89.920 Prec@5 99.560 Loss 0.3335 Error@1 10.080
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.221 (0.221)  [2019-11-24 23:31:44]
+loss before attack: 0.0697
+loss after attack: 0.0845
+bit flips: 1
+hamming_dist: 0
+  **Test** Prec@1 89.860 Prec@5 99.580 Loss 0.3336 Error@1 10.140
+iteration Time 1.734 (1.734)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([2.6520e-05, 5.4042e-06, 4.5789e-06, 4.5845e-05, 5.6303e-05, 9.7187e-05,
+        1.3605e-05, 9.8604e-06, 1.6422e-05, 7.1535e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36., -36., -36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+3.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19., -19.,  19., -10.,   3.,  11.,  -2.,   6., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19., -19.,  19.,  19., -19.,  11.,  -2.,   6., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [002/020]   Attack Time 0.215 (0.218)  [2019-11-24 23:31:46]
+loss before attack: 0.0845
+loss after attack: 0.1029
+bit flips: 2
+hamming_dist: 0
+  **Test** Prec@1 89.560 Prec@5 99.630 Loss 0.3401 Error@1 10.440
+iteration Time 1.876 (1.805)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([3.2071e-05, 2.9912e-06, 1.2437e-05, 4.0509e-05, 6.2486e-05, 1.4501e-04,
+        2.6958e-05, 6.6527e-06, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  108.,  108.,   36.,   36., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36.,   36.,   36., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+7.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,   2.,  19.,  -6., -19.,   7.,  19., -19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19.,   2.,  19.,  -6.,  19., -19.,  19., -19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [003/020]   Attack Time 0.226 (0.221)  [2019-11-24 23:31:48]
+loss before attack: 0.1029
+loss after attack: 0.1220
+bit flips: 3
+hamming_dist: 0
+  **Test** Prec@1 89.240 Prec@5 99.660 Loss 0.3489 Error@1 10.760
+iteration Time 2.028 (1.879)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([2.4821e-06, 1.5200e-05, 0.0000e+00, 0.0000e+00, 7.1717e-05, 1.8162e-04,
+        2.3897e-05, 8.8360e-06, 1.7887e-05, 1.0876e-04], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36., 108., 108., 108., 108.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36.,  36., 108., 108.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,  19., -19.,   0., -19.,  12., -19., -10., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,  19., -19.,  19., -19.,  12., -19., -10., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [004/020]   Attack Time 0.219 (0.220)  [2019-11-24 23:31:50]
+loss before attack: 0.1220
+loss after attack: 0.1445
+bit flips: 4
+hamming_dist: 0
+  **Test** Prec@1 88.860 Prec@5 99.620 Loss 0.3627 Error@1 11.140
+iteration Time 2.110 (1.937)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 2.2796e-05, 0.0000e+00, 2.8320e-05, 7.2939e-05, 2.0441e-04,
+        5.9767e-05, 1.0800e-05, 2.9928e-05, 1.2314e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ 108.,  108.,  -36.,  -36.,   36.,   36.,  -36.,  -36., -108., -108.],
+       device='cuda:0')
+------------
+tensor([ 108.,  108.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-2.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -16., -19.,  19., -19.,  -2.,  19., -19.,  18.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -16., -19.,  19.,  19., -19.,  19., -19.,  18.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [005/020]   Attack Time 0.216 (0.219)  [2019-11-24 23:31:52]
+loss before attack: 0.1445
+loss after attack: 0.1667
+bit flips: 5
+hamming_dist: 0
+  **Test** Prec@1 88.450 Prec@5 99.610 Loss 0.3734 Error@1 11.550
+iteration Time 2.143 (1.978)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([4.1190e-05, 2.6275e-05, 1.1633e-05, 4.7785e-05, 0.0000e+00, 1.9961e-04,
+        0.0000e+00, 1.7655e-05, 1.0390e-05, 8.0946e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36.,  36.,  36., 108., 108., 108., 108.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36.,  36.,  36., 108., 108.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ -6.,  17., -19.,  19.,  19., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ -6.,  17., -19.,  19.,  19., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [006/020]   Attack Time 0.212 (0.218)  [2019-11-24 23:31:55]
+loss before attack: 0.1667
+loss after attack: 0.1945
+bit flips: 6
+hamming_dist: 0
+  **Test** Prec@1 87.890 Prec@5 99.570 Loss 0.3901 Error@1 12.110
+iteration Time 2.048 (1.990)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([3.9736e-06, 2.8445e-05, 0.0000e+00, 0.0000e+00, 7.0017e-05, 2.3447e-04,
+        5.5726e-05, 1.4345e-05, 2.6226e-05, 9.6953e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36., 108., 108.,  36.,  36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+11.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -19.,  11.,  19., -12., -17., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19.,  19., -19.,  19., -12., -17., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [007/020]   Attack Time 0.213 (0.217)  [2019-11-24 23:31:57]
+loss before attack: 0.1945
+loss after attack: 0.2228
+bit flips: 7
+hamming_dist: 0
+  **Test** Prec@1 87.410 Prec@5 99.500 Loss 0.4072 Error@1 12.590
+iteration Time 1.868 (1.972)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([9.4502e-06, 3.4670e-05, 1.4630e-05, 8.5209e-05, 0.0000e+00, 2.9910e-04,
+        1.5234e-04, 9.2796e-05, 7.2345e-05, 8.2199e-06], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36., -108., -108.,  108.,  108.,  108.,  108., -108., -108.,   36.],
+       device='cuda:0')
+------------
+tensor([  36., -108., -108.,  108.,  108.,   36.,   36., -108., -108.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+7.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([13., 19., 19., -1., 19.,  7.,  4.,  1., 19., 19.], device='cuda:0')
+------------
+tensor([ 13.,  19.,  19.,  -1.,  19., -19.,  19.,   1.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [008/020]   Attack Time 0.218 (0.217)  [2019-11-24 23:31:59]
+loss before attack: 0.2228
+loss after attack: 0.2591
+bit flips: 8
+hamming_dist: 0
+  **Test** Prec@1 86.780 Prec@5 99.440 Loss 0.4336 Error@1 13.220
+iteration Time 1.984 (1.974)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([1.4274e-05, 4.6705e-05, 2.0166e-06, 5.6546e-05, 2.4902e-05, 4.1590e-04,
+        1.5110e-04, 7.2929e-05, 7.3164e-05, 1.7171e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36., -36., -36., -36., -36., 108., 108.,  36.,  36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36., -36., -36., -36., -36.,  36.,  36.,  36.,  36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+8.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19.,  -1.,   8., -19., -19., -12.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19.,  -1., -19.,  19., -19., -12.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [009/020]   Attack Time 0.222 (0.218)  [2019-11-24 23:32:01]
+loss before attack: 0.2591
+loss after attack: 0.3022
+bit flips: 9
+hamming_dist: 0
+  **Test** Prec@1 86.470 Prec@5 99.370 Loss 0.4425 Error@1 13.530
+iteration Time 1.910 (1.967)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([1.4770e-05, 7.8710e-05, 0.0000e+00, 0.0000e+00, 9.3790e-06, 5.2952e-04,
+        2.9185e-04, 1.3222e-04, 0.0000e+00, 4.7947e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 108.,   36.,   36., -108., -108.,  108.,  108., -108., -108.,   36.],
+       device='cuda:0')
+------------
+tensor([ 108.,   36.,   36., -108., -108.,   36.,   36., -108., -108.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+6.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([  6., -19.,  19., -19.,  -6.,   6.,   9.,   2., -19., -19.],
+       device='cuda:0')
+------------
+tensor([  6., -19.,  19., -19.,  -6., -19.,  19.,   2., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [010/020]   Attack Time 0.218 (0.218)  [2019-11-24 23:32:03]
+loss before attack: 0.3022
+loss after attack: 0.3536
+bit flips: 10
+hamming_dist: 0
+  **Test** Prec@1 85.720 Prec@5 99.360 Loss 0.4629 Error@1 14.280
+iteration Time 1.731 (1.943)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 2.0977e-05, 6.2772e-04,
+        2.0412e-04, 0.0000e+00, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108., -108.,   36.,   36.,  108.,  108., -108., -108., -108.],
+       device='cuda:0')
+------------
+tensor([-108., -108., -108.,   36.,   36.,   36.,   36., -108., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+2.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19., -19.,  19., -19.,   2.,   9., -19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19., -19.,  19., -19., -19.,  19., -19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [011/020]   Attack Time 0.218 (0.218)  [2019-11-24 23:32:05]
+loss before attack: 0.3536
+loss after attack: 0.4162
+bit flips: 11
+hamming_dist: 0
+  **Test** Prec@1 84.060 Prec@5 99.340 Loss 0.5287 Error@1 15.940
+iteration Time 2.347 (1.980)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([2.2595e-04, 1.3589e-04, 0.0000e+00, 4.5034e-06, 1.3368e-04, 2.3872e-04,
+        0.0000e+00, 7.9956e-05, 5.5619e-05, 1.3561e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108., -108., -108.,  -36.,  -36.,  108.,  108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108., -108., -108., -108.,   36.,   36.,  108.,  108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+0.0
+Deviation Value prior to Attacking Point
+tensor([ -5.,  19., -19.,  -5.,  19., -19.,  19., -19.,   4., -19.],
+       device='cuda:0')
+------------
+tensor([ -5.,  19., -19.,  -5.,  19.,   0.,  19., -19.,   4., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [012/020]   Attack Time 0.230 (0.219)  [2019-11-24 23:32:08]
+loss before attack: 0.4162
+loss after attack: 0.4704
+bit flips: 12
+hamming_dist: 0
+  **Test** Prec@1 83.620 Prec@5 99.270 Loss 0.5539 Error@1 16.380
+iteration Time 2.029 (1.984)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([3.0271e-04, 8.4298e-05, 1.0785e-04, 5.3321e-05, 2.7093e-04, 4.2567e-04,
+        8.7128e-05, 0.0000e+00, 0.0000e+00, 1.5767e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36.,  36.,  36.,  36.,  36., -36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36., -36., -36., -36., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+13.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -10., -19.,  19., -19.,  13.,  19., -19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -10., -19.,  19.,  19., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [013/020]   Attack Time 0.214 (0.219)  [2019-11-24 23:32:10]
+loss before attack: 0.4704
+loss after attack: 0.5387
+bit flips: 13
+hamming_dist: 0
+  **Test** Prec@1 82.500 Prec@5 99.230 Loss 0.5931 Error@1 17.500
+iteration Time 1.976 (1.983)
+Attacking which layer:
+stage_1.1.conv_a
+Gradient Value at Attacking layer:
+tensor([1.0423e-04, 1.3175e-04, 4.3590e-05, 3.9093e-04, 6.7143e-04, 7.2440e-04,
+        0.0000e+00, 0.0000e+00, 0.0000e+00, 2.6110e-04], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36., -36.,  36.,  36., 108., 108.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36., -36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ -8., -19.,  19., -19.,  19., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ -8., -19.,  19., -19.,  19., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [014/020]   Attack Time 0.219 (0.219)  [2019-11-24 23:32:12]
+loss before attack: 0.5387
+loss after attack: 0.6170
+bit flips: 14
+hamming_dist: 0
+  **Test** Prec@1 80.530 Prec@5 99.090 Loss 0.6637 Error@1 19.470
+iteration Time 2.162 (1.996)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0000, 0.0000, 0.0000, 0.0005, 0.0000, 0.0014, 0.0009, 0.0000, 0.0000,
+        0.0000], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108., -108., -108., -108.,  108.,  108.,   36.,   36., -108.],
+       device='cuda:0')
+------------
+tensor([-108., -108., -108., -108., -108.,   36.,   36.,   36.,   36., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+9.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19., -19., -13., -19.,   9.,   8.,  19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19., -19., -13., -19., -19.,  19.,  19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [015/020]   Attack Time 0.221 (0.219)  [2019-11-24 23:32:15]
+loss before attack: 0.6170
+loss after attack: 0.7090
+bit flips: 15
+hamming_dist: 0
+  **Test** Prec@1 78.100 Prec@5 99.090 Loss 0.7713 Error@1 21.900
+iteration Time 1.859 (1.987)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([4.7440e-04, 0.0000e+00, 0.0000e+00, 0.0000e+00, 4.1321e-05, 5.6740e-04,
+        0.0000e+00, 2.8311e-06, 2.5855e-06, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36., -108., -108.,   36.,   36.,   36.,   36.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36., -108., -108.,  108.,  108.,   36.,   36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+10.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,  19., -19.,  19., -19.,  19., -13.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,  19., -19.,  19.,  10.,  19., -13.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [016/020]   Attack Time 0.219 (0.219)  [2019-11-24 23:32:17]
+loss before attack: 0.7090
+loss after attack: 0.8086
+bit flips: 16
+hamming_dist: 0
+  **Test** Prec@1 76.450 Prec@5 99.010 Loss 0.8639 Error@1 23.550
+iteration Time 1.900 (1.982)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([5.5222e-05, 2.9426e-05, 1.1512e-04, 1.9889e-04, 4.1141e-04, 1.3186e-03,
+        5.3877e-04, 7.2047e-04, 2.9253e-04, 7.6819e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36.,   36.,   36.,  -36.,  -36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([ -36.,  -36.,   36.,   36.,   36.,   36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+12.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ -6.,  19.,  -6., -19.,  19.,  12., -14.,   4.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ -6.,  19.,  -6., -19., -19.,  19., -14.,   4.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [017/020]   Attack Time 0.218 (0.219)  [2019-11-24 23:32:19]
+loss before attack: 0.8086
+loss after attack: 0.9091
+bit flips: 17
+hamming_dist: 0
+  **Test** Prec@1 74.590 Prec@5 98.730 Loss 0.9726 Error@1 25.410
+iteration Time 1.829 (1.973)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([7.7434e-05, 3.0958e-05, 1.0546e-04, 2.4633e-04, 6.3809e-04, 1.5513e-03,
+        7.2952e-04, 7.2270e-04, 3.9838e-04, 9.0781e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36., -36., -36., 108., 108.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-1.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -19.,  -1.,   8., -19., -19., -12.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19., -19.,  19., -19.,  19., -19., -12.],
+       device='cuda:0')
+**********************************
+Iteration: [018/020]   Attack Time 0.216 (0.219)  [2019-11-24 23:32:21]
+loss before attack: 0.9091
+loss after attack: 1.0148
+bit flips: 18
+hamming_dist: 0
+  **Test** Prec@1 73.000 Prec@5 98.530 Loss 1.0732 Error@1 27.000
+iteration Time 2.127 (1.981)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([2.3976e-04, 3.2795e-04, 5.9905e-04, 1.5564e-04, 1.0381e-03, 1.9700e-03,
+        6.5089e-04, 8.4739e-05, 3.2617e-06, 2.5270e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([108.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([108.,  36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -10., -19.,   0.,  -6., -19.,  19.,  -4.,   5.,  19.],
+       device='cuda:0')
+------------
+tensor([-19., -10., -19.,   0.,  -6., -19.,  19.,  -4.,   5.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [019/020]   Attack Time 0.217 (0.219)  [2019-11-24 23:32:23]
+loss before attack: 1.0148
+loss after attack: 1.1347
+bit flips: 19
+hamming_dist: 0
+  **Test** Prec@1 71.190 Prec@5 98.300 Loss 1.1943 Error@1 28.810
+iteration Time 1.800 (1.972)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([4.6897e-04, 4.2459e-04, 7.0302e-04, 1.2755e-04, 2.3266e-04, 1.1177e-03,
+        5.7571e-05, 2.4449e-04, 3.6558e-04, 4.9711e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  -36.,  -36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36.,  -36.,  -36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -14., -14.,  19.,  19., -19.,   0.,  10., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([-19., -14., -14.,  19.,  19., -19.,   0.,  10., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [020/020]   Attack Time 0.211 (0.218)  [2019-11-24 23:32:25]
+loss before attack: 1.1347
+loss after attack: 1.3483
+bit flips: 20
+hamming_dist: 0
+  **Test** Prec@1 69.030 Prec@5 97.960 Loss 1.3938 Error@1 30.970
+iteration Time 2.101 (1.978)
+Attacking which layer:
+stage_2.0.conv_a
+Gradient Value at Attacking layer:
+tensor([5.7807e-04, 4.7826e-04, 7.4553e-04, 1.3463e-04, 2.3098e-04, 1.6660e-03,
+        5.1449e-05, 2.6873e-04, 5.8049e-04, 6.7014e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36.,  36.,  36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-10.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -19.,  10.,  19., -10., -19.,  19., -19.,  13.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -19.,  10., -19.,  19., -19.,  19.,  19., -19.],
+       device='cuda:0')
+=> Running Accuracy is [89.86, 89.56, 89.24, 88.86, 88.45, 87.89, 87.41, 86.78, 86.47, 85.72, 84.06, 83.62, 82.5, 80.53, 78.1, 76.45, 74.59, 73.0, 71.19, 69.03]
+=> Running Loss is [0.33359006719589235, 0.3400555596351624, 0.3489280753135681, 0.3627293885231018, 0.3734402319908142, 0.3900664889335632, 0.4072026572227478, 0.43355748977661135, 0.44252466058731077, 0.4629150686264038, 0.5287459057807923, 0.5539314725875855, 0.5931487792015075, 0.6637063811302185, 0.7712887823104858, 0.8639151755332947, 0.9726178812026978, 1.073206962108612, 1.1942986860275269, 1.3937876953125]
+=> Seed is 2866
+  **Test** Prec@1 89.920 Prec@5 99.560 Loss 0.3335 Error@1 10.080
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.225 (0.225)  [2019-11-24 23:32:30]
+loss before attack: 0.0757
+loss after attack: 0.0950
+bit flips: 1
+hamming_dist: 0
+  **Test** Prec@1 89.700 Prec@5 99.540 Loss 0.3419 Error@1 10.300
+iteration Time 1.947 (1.947)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 2.9242e-06, 0.0000e+00, 3.2182e-06, 0.0000e+00, 7.0735e-05,
+        1.6763e-06, 3.5719e-06, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 108.,   36.,   36.,   36.,   36.,  108.,  108.,   36.,   36., -108.],
+       device='cuda:0')
+------------
+tensor([ 108.,   36.,   36.,   36.,   36.,   36.,   36.,   36.,   36., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+17.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19.,  19.,  17., -19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19.,  19., -19.,  -2., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [002/020]   Attack Time 0.218 (0.222)  [2019-11-24 23:32:32]
+loss before attack: 0.0950
+loss after attack: 0.1286
+bit flips: 2
+hamming_dist: 0
+  **Test** Prec@1 89.280 Prec@5 99.540 Loss 0.3602 Error@1 10.720
+iteration Time 2.005 (1.976)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([5.3337e-05, 0.0000e+00, 0.0000e+00, 1.9622e-05, 0.0000e+00, 1.6396e-04,
+        1.6842e-05, 8.6076e-06, 6.6622e-05, 3.3510e-05], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108.,   36.,   36.,  108.,  108.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108., -108.,   36.,   36.,   36.,   36.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+11.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19.,  19.,  11.,  19., -13., -19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19.,  19., -19.,  19., -13., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [003/020]   Attack Time 0.222 (0.222)  [2019-11-24 23:32:34]
+loss before attack: 0.1286
+loss after attack: 0.1479
+bit flips: 3
+hamming_dist: 0
+  **Test** Prec@1 89.170 Prec@5 99.520 Loss 0.3653 Error@1 10.830
+iteration Time 1.896 (1.949)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([6.8245e-05, 5.6835e-05, 2.8630e-07, 2.6180e-05, 2.1123e-05, 2.6765e-04,
+        0.0000e+00, 0.0000e+00, 9.4032e-06, 5.8514e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19., -19.,  19., -19., -19.,  19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19., -19., -19., -19., -19.,  19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [004/020]   Attack Time 0.225 (0.223)  [2019-11-24 23:32:36]
+loss before attack: 0.1479
+loss after attack: 0.1672
+bit flips: 4
+hamming_dist: 0
+  **Test** Prec@1 88.820 Prec@5 99.530 Loss 0.3776 Error@1 11.180
+iteration Time 2.100 (1.987)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([4.9908e-05, 0.0000e+00, 3.5803e-06, 3.8902e-05, 7.0536e-05, 1.8316e-04,
+        0.0000e+00, 9.0415e-05, 1.6273e-05, 4.7540e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36., -108., -108.,  -36.,  -36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([ -36.,  -36., -108., -108.,   36.,   36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-3.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -12.,  19.,  19.,  -3., -19.,  19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -12.,  19.,   1.,  19., -19.,  19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [005/020]   Attack Time 0.229 (0.224)  [2019-11-24 23:32:39]
+loss before attack: 0.1672
+loss after attack: 0.1962
+bit flips: 5
+hamming_dist: 0
+  **Test** Prec@1 88.290 Prec@5 99.500 Loss 0.4001 Error@1 11.710
+iteration Time 2.292 (2.048)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([7.4781e-05, 8.9552e-05, 2.7655e-05, 4.8837e-05, 4.6085e-05, 2.6309e-04,
+        0.0000e+00, 0.0000e+00, 8.2874e-05, 1.0244e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36., -108., -108.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-9.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-13.,  19.,  19., -19., -12.,  -9.,  19., -19.,  19.,   4.],
+       device='cuda:0')
+------------
+tensor([-13.,  19.,  19., -19., -19.,  19.,  19., -19.,  19.,   4.],
+       device='cuda:0')
+**********************************
+Iteration: [006/020]   Attack Time 0.228 (0.225)  [2019-11-24 23:32:41]
+loss before attack: 0.1962
+loss after attack: 0.2407
+bit flips: 6
+hamming_dist: 0
+  **Test** Prec@1 86.720 Prec@5 99.390 Loss 0.4519 Error@1 13.280
+iteration Time 2.102 (2.057)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 5.5799e-05, 5.8191e-05, 5.7872e-05, 3.6560e-04,
+        1.4983e-04, 8.6017e-05, 0.0000e+00, 8.9166e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108.,  -36.,  -36., -108., -108., -108., -108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108., -108.,  -36.,  -36.,  -36.,  -36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-14.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19.,  19., -19., -16., -14.,  19., -12.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19.,  19., -19., -19.,  19.,  19., -12.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [007/020]   Attack Time 0.213 (0.223)  [2019-11-24 23:32:43]
+loss before attack: 0.2407
+loss after attack: 0.3223
+bit flips: 7
+hamming_dist: 0
+  **Test** Prec@1 83.970 Prec@5 99.130 Loss 0.5589 Error@1 16.030
+iteration Time 2.127 (2.067)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([1.7999e-05, 2.5473e-05, 9.2985e-05, 7.0852e-05, 6.4312e-05, 5.8131e-04,
+        1.6001e-04, 0.0000e+00, 1.5430e-04, 1.4432e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,  -36.,  -36., -108., -108.,  108.,  108.,  108.,  108.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36., -36., -36., 108., 108., 108., 108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-11.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  -4., -19.,  -9., -11., -19.,  19.,  17.,   7.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  -4., -19., -19.,  19., -19.,  19.,  17.,   7.],
+       device='cuda:0')
+**********************************
+Iteration: [008/020]   Attack Time 0.227 (0.224)  [2019-11-24 23:32:46]
+loss before attack: 0.3223
+loss after attack: 0.4533
+bit flips: 8
+hamming_dist: 0
+  **Test** Prec@1 80.920 Prec@5 98.850 Loss 0.7036 Error@1 19.080
+iteration Time 1.804 (2.034)
+Attacking which layer:
+stage_1.2.conv_a
+Gradient Value at Attacking layer:
+tensor([3.8679e-04, 3.5098e-04, 8.7384e-05, 1.1369e-04, 2.3242e-04, 6.8672e-04,
+        0.0000e+00, 0.0000e+00, 7.9832e-05, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  -36.,  -36.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -18.,  19.,   8., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -18.,  19., -19.,  19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [009/020]   Attack Time 0.227 (0.224)  [2019-11-24 23:32:48]
+loss before attack: 0.4533
+loss after attack: 0.6120
+bit flips: 9
+hamming_dist: 0
+  **Test** Prec@1 77.170 Prec@5 98.370 Loss 0.8889 Error@1 22.830
+iteration Time 2.030 (2.034)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([4.7938e-05, 2.7285e-04, 2.1334e-04, 7.3230e-05, 4.5205e-05, 1.2595e-03,
+        1.5736e-04, 1.0038e-04, 1.9220e-04, 2.1307e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36.,   36.,   36., -108., -108.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36., -36., -36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-15.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19.,  19., -15.,  19.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19., -19.,  19.,  19.,  19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [010/020]   Attack Time 0.214 (0.223)  [2019-11-24 23:32:50]
+loss before attack: 0.6120
+loss after attack: 0.8113
+bit flips: 10
+hamming_dist: 0
+  **Test** Prec@1 72.740 Prec@5 97.660 Loss 1.1084 Error@1 27.260
+iteration Time 2.333 (2.064)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([1.6462e-04, 4.5775e-04, 3.1457e-04, 0.0000e+00, 1.1782e-04, 1.6802e-03,
+        1.7896e-04, 6.1185e-05, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36., 108., 108.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19.,  19., -19., -18., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19.,  19., -19., -19.,  19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [011/020]   Attack Time 0.218 (0.222)  [2019-11-24 23:32:53]
+loss before attack: 0.8113
+loss after attack: 1.0491
+bit flips: 11
+hamming_dist: 0
+  **Test** Prec@1 67.510 Prec@5 96.610 Loss 1.3943 Error@1 32.490
+iteration Time 2.015 (2.059)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([3.0216e-04, 5.0885e-04, 3.5556e-04, 1.5262e-04, 8.1871e-05, 2.0936e-03,
+        1.1833e-04, 1.3224e-04, 0.0000e+00, 3.9621e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36.,   36.,   36., -108., -108., -108., -108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([ -36.,  -36.,   36.,   36.,  -36.,  -36., -108., -108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-13.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19.,  19., -19.,  -1., -13.,  -8.,  -6.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19.,  19., -19., -19.,  19.,  -8.,  -6.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [012/020]   Attack Time 0.222 (0.222)  [2019-11-24 23:32:55]
+loss before attack: 1.0491
+loss after attack: 1.3890
+bit flips: 12
+hamming_dist: 0
+  **Test** Prec@1 60.400 Prec@5 94.480 Loss 1.8151 Error@1 39.600
+iteration Time 1.968 (2.052)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([6.5766e-05, 6.3743e-04, 4.0757e-04, 3.8884e-05, 5.3859e-04, 3.1432e-03,
+        1.4692e-04, 0.0000e+00, 1.9152e-05, 2.7261e-06], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36.,  36.,  36., -36., -36., -36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36.,  36., -36., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+5.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19.,   9.,   5.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19., -19.,  19.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [013/020]   Attack Time 0.220 (0.222)  [2019-11-24 23:32:57]
+loss before attack: 1.3890
+loss after attack: 1.8087
+bit flips: 13
+hamming_dist: 0
+  **Test** Prec@1 51.860 Prec@5 91.790 Loss 2.3351 Error@1 48.140
+iteration Time 1.818 (2.034)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 3.9246e-04, 7.5021e-06, 4.9375e-04, 3.8729e-03,
+        2.7221e-04, 5.9060e-04, 1.2488e-04, 5.0797e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36., -36., -36., -36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36.,  36.,  36., -36., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-9.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19.,  10., -13.,  19., -19.,  19., -19.,  16.,  13.],
+       device='cuda:0')
+------------
+tensor([-19.,  19.,  10., -13.,  19.,  -9.,  19., -19.,  16.,  13.],
+       device='cuda:0')
+**********************************
+Iteration: [014/020]   Attack Time 0.207 (0.221)  [2019-11-24 23:32:59]
+loss before attack: 1.8087
+loss after attack: 2.2326
+bit flips: 14
+hamming_dist: 0
+  **Test** Prec@1 44.000 Prec@5 88.570 Loss 2.8441 Error@1 56.000
+iteration Time 1.856 (2.021)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([3.3340e-04, 0.0000e+00, 5.0346e-04, 7.8852e-05, 4.1542e-04, 5.1606e-03,
+        3.1688e-04, 7.8058e-04, 1.1229e-04, 6.4675e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36., -36., -36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36.,  36.,  36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19.,  19.,  19.,  19., -19.,  19., -19., -19.,  -7.],
+       device='cuda:0')
+------------
+tensor([-19.,  19.,  19.,  19.,  19., -19.,  19., -19., -19.,  -7.],
+       device='cuda:0')
+**********************************
+Iteration: [015/020]   Attack Time 0.219 (0.221)  [2019-11-24 23:33:01]
+loss before attack: 2.2326
+loss after attack: 2.8179
+bit flips: 15
+hamming_dist: 0
+  **Test** Prec@1 33.750 Prec@5 82.000 Loss 3.5375 Error@1 66.250
+iteration Time 1.778 (2.005)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([1.6243e-04, 7.6849e-04, 5.4489e-04, 1.6384e-04, 0.0000e+00, 5.4138e-03,
+        3.8039e-04, 1.1432e-03, 1.3217e-04, 7.1343e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36., -108., -108.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-17.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19., -19., -17.,   9., -19.,  -6.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19., -19.,  19.,   9., -19.,  -6.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [016/020]   Attack Time 0.221 (0.221)  [2019-11-24 23:33:03]
+loss before attack: 2.8179
+loss after attack: 3.2018
+bit flips: 16
+hamming_dist: 0
+  **Test** Prec@1 28.060 Prec@5 76.390 Loss 3.9375 Error@1 71.940
+iteration Time 1.941 (2.001)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([1.4086e-03, 1.7678e-03, 1.1388e-03, 1.8112e-04, 4.4394e-05, 5.8781e-03,
+        5.5890e-04, 5.9142e-04, 1.1607e-03, 1.9447e-03], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  -36.,  -36.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19.,  19.,  19.,  19., -19., -19.,  19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19.,  19.,  19.,  19., -19., -19.,  19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [017/020]   Attack Time 0.220 (0.221)  [2019-11-24 23:33:05]
+loss before attack: 3.2018
+loss after attack: 3.5519
+bit flips: 17
+hamming_dist: 0
+  **Test** Prec@1 27.950 Prec@5 75.050 Loss 4.4464 Error@1 72.050
+iteration Time 2.046 (2.003)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([0.0015, 0.0005, 0.0000, 0.0006, 0.0018, 0.0036, 0.0010, 0.0001, 0.0040,
+        0.0024], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36., -36., -36., -36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36., -36., -36., -36., 108., 108.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+1.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19., -19.,  19., -19., -19.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19., -19.,  19., -19.,   1., -19., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [018/020]   Attack Time 0.218 (0.221)  [2019-11-24 23:33:08]
+loss before attack: 3.5519
+loss after attack: 3.9553
+bit flips: 18
+hamming_dist: 0
+  **Test** Prec@1 26.810 Prec@5 72.510 Loss 4.9759 Error@1 73.190
+iteration Time 2.116 (2.010)
+Attacking which layer:
+stage_3.1.conv_a
+Gradient Value at Attacking layer:
+tensor([2.8520e-05, 4.5676e-05, 4.1226e-05, 3.0826e-06, 6.7272e-04, 4.0190e-03,
+        5.9141e-04, 1.3934e-04, 1.4265e-05, 2.0588e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36.,  36.,  36.,  36.,  36., -36., -36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36., 108., 108., -36., -36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-4.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,   0.,  19., -19.,  19., -19.,  19., -19., -19.,  16.],
+       device='cuda:0')
+------------
+tensor([ 19.,   0.,  19., -19., -11.,  -4.,  19., -19., -19.,  16.],
+       device='cuda:0')
+**********************************
+Iteration: [019/020]   Attack Time 0.240 (0.222)  [2019-11-24 23:33:10]
+loss before attack: 3.9553
+loss after attack: 4.4166
+bit flips: 19
+hamming_dist: 0
+  **Test** Prec@1 25.890 Prec@5 70.810 Loss 5.6097 Error@1 74.110
+iteration Time 2.025 (2.010)
+Attacking which layer:
+stage_1.2.conv_b
+Gradient Value at Attacking layer:
+tensor([0.0020, 0.0007, 0.0000, 0.0007, 0.0028, 0.0057, 0.0011, 0.0002, 0.0053,
+        0.0035], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36., -36.,  36.,  36.,  36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36., -36.,  36.,  36., 108., 108.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-12.0
+Deviation Value prior to Attacking Point
+tensor([ 19.,  19., -19.,  19., -19., -19.,  19., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19.,  19., -19.,  19., -19., -12., -19., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [020/020]   Attack Time 0.223 (0.222)  [2019-11-24 23:33:12]
+loss before attack: 4.4166
+loss after attack: 4.9343
+bit flips: 20
+hamming_dist: 0
+  **Test** Prec@1 23.270 Prec@5 69.220 Loss 6.2634 Error@1 76.730
+iteration Time 2.018 (2.011)
+Attacking which layer:
+stage_1.1.conv_a
+Gradient Value at Attacking layer:
+tensor([9.4609e-04, 8.9523e-03, 5.4089e-04, 0.0000e+00, 7.0699e-04, 1.1034e-02,
+        1.3916e-03, 6.5953e-03, 0.0000e+00, 3.5842e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108.,   36.,   36.,   36.,   36.,   36.,   36., -108., -108.],
+       device='cuda:0')
+------------
+tensor([-108., -108.,   36.,   36.,  -36.,  -36.,   36.,   36., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-15.,  19., -19.,  19., -19.,  19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([-15.,  19., -19.,  19.,  -8.,  19., -19.,  19., -19.,  19.],
+       device='cuda:0')
+=> Running Accuracy is [89.7, 89.28, 89.17, 88.82, 88.29, 86.72, 83.97, 80.92, 77.17, 72.74, 67.51, 60.4, 51.86, 44.0, 33.75, 28.06, 27.95, 26.81, 25.89, 23.27]
+=> Running Loss is [0.3419459620475769, 0.36021839876174927, 0.36531139841079713, 0.3775781665802002, 0.40009195671081543, 0.4518878280639648, 0.5588810119628906, 0.703552811050415, 0.8888669204711914, 1.1084327640533447, 1.3942816947937011, 1.8150500274658203, 2.3350753200531007, 2.844109809112549, 3.5375447502136232, 3.9374574378967284, 4.446404146575928, 4.975926477050781, 5.609710778045654, 6.263369163513183]
+=> Seed is 1525
+  **Test** Prec@1 89.920 Prec@5 99.560 Loss 0.3335 Error@1 10.080
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.222 (0.222)  [2019-11-24 23:33:17]
+loss before attack: 0.1212
+loss after attack: 0.1438
+bit flips: 1
+hamming_dist: 0
+  **Test** Prec@1 89.670 Prec@5 99.580 Loss 0.3347 Error@1 10.330
+iteration Time 2.329 (2.329)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([4.1818e-05, 0.0000e+00, 0.0000e+00, 1.4571e-04, 6.3529e-05, 1.7289e-04,
+        2.3730e-05, 0.0000e+00, 0.0000e+00, 1.1661e-04], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-108.,   36.,   36.,   36.,   36.,  108.,  108.,   36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108.,   36.,   36.,   36.,   36.,   36.,   36.,   36.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+2.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-12., -19.,  19.,  19., -19.,   2., -13.,  19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([-12., -19.,  19.,  19., -19., -19.,  19.,  19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [002/020]   Attack Time 0.214 (0.218)  [2019-11-24 23:33:19]
+loss before attack: 0.1438
+loss after attack: 0.1660
+bit flips: 2
+hamming_dist: 0
+  **Test** Prec@1 89.690 Prec@5 99.590 Loss 0.3360 Error@1 10.310
+iteration Time 2.259 (2.294)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([6.6144e-05, 1.8380e-04, 0.0000e+00, 5.3883e-05, 9.3276e-05, 2.9305e-04,
+        5.2627e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([36., 36., 36., 36., 36., 36., 36.], device='cuda:0')
+------------
+tensor([ 36.,  36.,  36.,  36.,  36., -36., -36.], device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -16.,  -6.,  19., -19.], device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -16.,  -6.,  19., -19.], device='cuda:0')
+**********************************
+Iteration: [003/020]   Attack Time 0.215 (0.217)  [2019-11-24 23:33:22]
+loss before attack: 0.1660
+loss after attack: 0.2077
+bit flips: 3
+hamming_dist: 0
+  **Test** Prec@1 89.440 Prec@5 99.590 Loss 0.3434 Error@1 10.560
+iteration Time 1.975 (2.188)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([4.7346e-05, 0.0000e+00, 1.0728e-04, 0.0000e+00, 2.4128e-06, 3.3193e-04,
+        2.8922e-05, 0.0000e+00, 1.9395e-05, 2.1813e-04], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,  -36.,  -36.,  108.,  108.,   36.,   36., -108., -108.,   36.],
+       device='cuda:0')
+------------
+tensor([  36.,  -36.,  -36.,  108.,  108.,  -36.,  -36., -108., -108.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19.,  19., -19.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19.,  19., -19., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [004/020]   Attack Time 0.225 (0.219)  [2019-11-24 23:33:24]
+loss before attack: 0.2077
+loss after attack: 0.2362
+bit flips: 4
+hamming_dist: 0
+  **Test** Prec@1 89.380 Prec@5 99.590 Loss 0.3468 Error@1 10.620
+iteration Time 2.067 (2.158)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 0.0000e+00, 7.2936e-05, 2.4202e-04, 4.0807e-04,
+        1.2851e-04, 1.0582e-05, 4.6466e-05, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,  -36.,  -36.,   36.,   36.,   36.,   36., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36.,  -36.,  -36.,  -36.,  -36.,   36.,   36., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19.,  19., -19.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19.,  19., -19.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [005/020]   Attack Time 0.217 (0.219)  [2019-11-24 23:33:26]
+loss before attack: 0.2362
+loss after attack: 0.2663
+bit flips: 5
+hamming_dist: 0
+  **Test** Prec@1 89.240 Prec@5 99.620 Loss 0.3538 Error@1 10.760
+iteration Time 2.187 (2.163)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([1.4941e-05, 0.0000e+00, 5.9525e-05, 0.0000e+00, 1.2055e-06, 3.7141e-04,
+        2.7799e-05, 1.8317e-04, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36.,   36.,   36.,   36., -108., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36.,   36.,   36.,  -36.,  -36., -108., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -19.,  19., -19.,  19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19., -19.,  19.,  14.,  19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [006/020]   Attack Time 0.237 (0.222)  [2019-11-24 23:33:29]
+loss before attack: 0.2663
+loss after attack: 0.2976
+bit flips: 6
+hamming_dist: 0
+  **Test** Prec@1 89.000 Prec@5 99.630 Loss 0.3632 Error@1 11.000
+iteration Time 2.006 (2.137)
+Attacking which layer:
+conv_1_3x3
+Gradient Value at Attacking layer:
+tensor([1.1848e-05, 0.0000e+00, 0.0000e+00, 1.9481e-04, 2.8867e-05, 4.2329e-04,
+        1.6473e-07, 0.0000e+00, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([108.,  36.,  36.,  36.,  36.,  36.,  36.,  36.,  36., -36.],
+       device='cuda:0')
+------------
+tensor([108.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -19.,  19., -19.,  19., -19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19., -19.,  19., -19.,  19., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [007/020]   Attack Time 0.225 (0.222)  [2019-11-24 23:33:31]
+loss before attack: 0.2976
+loss after attack: 0.3294
+bit flips: 7
+hamming_dist: 0
+  **Test** Prec@1 88.680 Prec@5 99.590 Loss 0.3829 Error@1 11.320
+iteration Time 2.050 (2.125)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([3.4805e-05, 0.0000e+00, 7.9684e-05, 3.0867e-06, 6.8449e-05, 2.3989e-04,
+        0.0000e+00, 0.0000e+00, 8.3429e-06, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36.,   36.,   36., -108., -108., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36.,   36.,  -36.,  -36., -108., -108., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -19.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19., -19.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [008/020]   Attack Time 0.215 (0.221)  [2019-11-24 23:33:33]
+loss before attack: 0.3294
+loss after attack: 0.3695
+bit flips: 8
+hamming_dist: 0
+  **Test** Prec@1 88.300 Prec@5 99.520 Loss 0.3941 Error@1 11.700
+iteration Time 1.975 (2.106)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([6.3969e-05, 0.0000e+00, 3.8045e-05, 4.6526e-06, 4.4456e-05, 2.9763e-04,
+        4.1122e-05, 1.6053e-04, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+108.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36., -108., -108.,  108.,  108.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([  36.,   36., -108., -108.,   36.,   36.,  -36.,  -36.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+16.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19.,  19.,  12., -19.,  16.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19.,  19.,  12.,  -7., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [009/020]   Attack Time 0.210 (0.220)  [2019-11-24 23:33:35]
+loss before attack: 0.3695
+loss after attack: 0.4143
+bit flips: 9
+hamming_dist: 0
+  **Test** Prec@1 87.680 Prec@5 99.520 Loss 0.4126 Error@1 12.320
+iteration Time 2.288 (2.126)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 7.3604e-06, 5.6575e-05, 1.0717e-05, 2.0536e-05, 3.6380e-04,
+        3.2750e-05, 1.1914e-04, 3.2118e-04, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ 36.,  36., -36., -36.,  36.,  36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19., -19., -19.,  19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19., -19., -10., -19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [010/020]   Attack Time 0.228 (0.221)  [2019-11-24 23:33:38]
+loss before attack: 0.4143
+loss after attack: 0.4564
+bit flips: 10
+hamming_dist: 0
+  **Test** Prec@1 87.130 Prec@5 99.460 Loss 0.4441 Error@1 12.870
+iteration Time 2.095 (2.123)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([4.3322e-06, 5.4890e-05, 0.0000e+00, 0.0000e+00, 1.4946e-05, 3.7231e-04,
+        8.8757e-06, 0.0000e+00, 1.2776e-05, 2.8662e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36.,  36.,  36.,  36.,  36., 108., 108., -36., -36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36., -36., -36., 108., 108., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-12.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -19.,  19., -19.,  19.,  18.,  19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -19.,  19.,  19., -12.,  18.,  19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [011/020]   Attack Time 0.229 (0.222)  [2019-11-24 23:33:40]
+loss before attack: 0.4564
+loss after attack: 0.5042
+bit flips: 11
+hamming_dist: 0
+  **Test** Prec@1 86.560 Prec@5 99.260 Loss 0.4805 Error@1 13.440
+iteration Time 1.953 (2.108)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 3.0911e-04, 3.4634e-04,
+        0.0000e+00, 2.3109e-05, 4.1822e-05, 9.1656e-06], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([-108., -108., -108., -108.,   36.,   36.,  108.,  108.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([-108., -108., -108., -108.,  -36.,  -36.,  108.,  108.,   36.,   36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19., -19., -19., -19., -19.,  19.,  19., -12., -19., -19.],
+       device='cuda:0')
+------------
+tensor([-19., -19., -19., -19.,  -5.,  19.,  19., -12., -19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [012/020]   Attack Time 0.208 (0.220)  [2019-11-24 23:33:42]
+loss before attack: 0.5042
+loss after attack: 0.5772
+bit flips: 12
+hamming_dist: 0
+  **Test** Prec@1 85.730 Prec@5 98.830 Loss 0.5450 Error@1 14.270
+iteration Time 2.109 (2.108)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([1.1721e-04, 0.0000e+00, 2.9219e-04, 2.5132e-05, 2.0209e-04, 7.3071e-04,
+        0.0000e+00, 0.0000e+00, 7.4184e-05, 0.0000e+00], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-108.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36.,   36.,   36., -108., -108., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36.,   36., -108., -108., -108., -108., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -19.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19., -13.,  19., -19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [013/020]   Attack Time 0.214 (0.220)  [2019-11-24 23:33:45]
+loss before attack: 0.5772
+loss after attack: 0.6427
+bit flips: 13
+hamming_dist: 0
+  **Test** Prec@1 85.050 Prec@5 98.650 Loss 0.5831 Error@1 14.950
+iteration Time 2.132 (2.110)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([1.9604e-05, 1.4211e-05, 0.0000e+00, 1.5068e-04, 1.7338e-04, 6.7961e-04,
+        0.0000e+00, 0.0000e+00, 1.0936e-04, 3.5420e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,  -36.,  -36., -108., -108.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-14.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([  5.,   5., -19.,  19.,  19., -14., -19.,  19.,  17.,  -2.],
+       device='cuda:0')
+------------
+tensor([  5.,   5., -19.,  19., -19.,  19., -19.,  19.,  17.,  -2.],
+       device='cuda:0')
+**********************************
+Iteration: [014/020]   Attack Time 0.215 (0.220)  [2019-11-24 23:33:47]
+loss before attack: 0.6427
+loss after attack: 0.7105
+bit flips: 14
+hamming_dist: 0
+  **Test** Prec@1 84.740 Prec@5 98.320 Loss 0.6156 Error@1 15.260
+iteration Time 1.949 (2.098)
+Attacking which layer:
+stage_1.0.conv_b
+Gradient Value at Attacking layer:
+tensor([1.8935e-04, 1.0928e-04, 6.3400e-04, 8.8143e-05, 2.3453e-05, 7.1230e-04,
+        2.6662e-04, 3.2862e-04, 7.0929e-05, 2.0417e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,   36.,   36.,  -36.,  -36., -108., -108.,   36.,   36., -108.],
+       device='cuda:0')
+------------
+tensor([ -36.,   36.,   36.,  -36.,  -36.,  -36.,  -36.,   36.,   36., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-9.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  19.,  19., -19.,  -9.,  -3., -19.,  19., -11.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  19.,  19., -19.,  19., -19., -19.,  19., -11.],
+       device='cuda:0')
+**********************************
+Iteration: [015/020]   Attack Time 0.214 (0.219)  [2019-11-24 23:33:49]
+loss before attack: 0.7105
+loss after attack: 0.7805
+bit flips: 15
+hamming_dist: 0
+  **Test** Prec@1 84.070 Prec@5 98.120 Loss 0.6521 Error@1 15.930
+iteration Time 1.912 (2.086)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([2.2709e-05, 8.0370e-06, 2.1510e-04, 1.4225e-04, 2.7298e-04, 1.0004e-03,
+        3.5656e-04, 3.8662e-04, 1.6651e-04, 1.0233e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,  -36.,  -36., -108., -108.,   36.,   36.,   36.,   36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+4.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([ -6., -19.,  19.,  12., -14.,   4.,  19., -19.,  19., -19.],
+       device='cuda:0')
+------------
+tensor([ -6., -19.,  19.,  12., -19.,  19.,  19., -19.,  19., -19.],
+       device='cuda:0')
+**********************************
+Iteration: [016/020]   Attack Time 0.213 (0.219)  [2019-11-24 23:33:51]
+loss before attack: 0.7805
+loss after attack: 0.8717
+bit flips: 16
+hamming_dist: 0
+  **Test** Prec@1 82.930 Prec@5 97.890 Loss 0.6982 Error@1 17.070
+iteration Time 2.047 (2.083)
+Attacking which layer:
+stage_1.0.conv_a
+Gradient Value at Attacking layer:
+tensor([5.1291e-05, 3.1224e-05, 2.2186e-04, 9.9020e-05, 3.1728e-04, 1.1687e-03,
+        0.0000e+00, 0.0000e+00, 1.6776e-04, 1.0340e-04], device='cuda:0')
+Centroid Value at Attacking Point
+-108.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,  -36.,  -36., -108., -108.,   36.,   36.,  -36.,  -36.],
+       device='cuda:0')
+------------
+tensor([ 36.,  36., -36., -36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+1.0
+------------
+19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  19., -19.,  19., -11.,   1., -19.,  19.,  10., -13.],
+       device='cuda:0')
+------------
+tensor([-19.,  19., -19.,  19., -19.,  19., -19.,  19.,  10., -13.],
+       device='cuda:0')
+**********************************
+Iteration: [017/020]   Attack Time 0.215 (0.219)  [2019-11-24 23:33:53]
+loss before attack: 0.8717
+loss after attack: 0.9449
+bit flips: 17
+hamming_dist: 0
+  **Test** Prec@1 82.370 Prec@5 97.420 Loss 0.7523 Error@1 17.630
+iteration Time 2.121 (2.086)
+Attacking which layer:
+classifier
+Gradient Value at Attacking layer:
+tensor([3.3472e-05, 7.6205e-05, 2.6084e-05, 0.0000e+00, 3.4966e-04, 4.8181e-04,
+        5.6864e-05, 5.4181e-05, 2.6147e-04, 6.7005e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+-36.0
+Centroid Value prior to Attacking Point
+tensor([ -36.,  -36., -108., -108.,   36.,   36.,   36.,   36., -108., -108.],
+       device='cuda:0')
+------------
+tensor([ -36.,  -36., -108., -108.,  -36.,  -36.,   36.,   36., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+19.0
+------------
+-10.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19.,  -9., -19.,   1.,  19.,   3., -19.,  19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19.,  -9., -19.,  19., -10.,   3., -19.,  19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [018/020]   Attack Time 0.231 (0.219)  [2019-11-24 23:33:56]
+loss before attack: 0.9449
+loss after attack: 1.0145
+bit flips: 18
+hamming_dist: 0
+  **Test** Prec@1 81.790 Prec@5 97.050 Loss 0.7811 Error@1 18.210
+iteration Time 2.089 (2.086)
+Attacking which layer:
+stage_1.1.conv_a
+Gradient Value at Attacking layer:
+tensor([2.4441e-05, 1.6991e-04, 0.0000e+00, 0.0000e+00, 3.1785e-05, 9.5037e-04,
+        1.7894e-05, 9.8705e-05, 1.6560e-04, 3.2941e-05], device='cuda:0')
+Centroid Value at Attacking Point
+36.0
+------------
+108.0
+Centroid Value prior to Attacking Point
+tensor([  36.,   36.,   36.,   36.,   36.,   36.,  -36.,  -36., -108., -108.],
+       device='cuda:0')
+------------
+tensor([  36.,   36.,   36.,   36.,  108.,  108.,  -36.,  -36., -108., -108.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -19.,  19.,  19., -19., -19.,  19.,   4.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -19.,  19.,  -4., -19., -19.,  19.,   4.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [019/020]   Attack Time 0.223 (0.219)  [2019-11-24 23:33:58]
+loss before attack: 1.0145
+loss after attack: 1.1087
+bit flips: 19
+hamming_dist: 0
+  **Test** Prec@1 81.160 Prec@5 96.860 Loss 0.8166 Error@1 18.840
+iteration Time 2.035 (2.083)
+Attacking which layer:
+stage_1.1.conv_a
+Gradient Value at Attacking layer:
+tensor([5.3803e-05, 2.0574e-04, 7.0848e-06, 0.0000e+00, 1.0725e-04, 1.1496e-03,
+        3.5845e-05, 2.9481e-04, 5.1129e-04, 7.9789e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36.,  36.,  36., -36., -36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36.,  36.,  36.,  36.,  36., -36., -36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([ 19., -19., -19.,  19.,  19., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+------------
+tensor([ 19., -19., -19.,  19.,  -7., -19.,  19., -19., -19.,  19.],
+       device='cuda:0')
+**********************************
+Iteration: [020/020]   Attack Time 0.230 (0.220)  [2019-11-24 23:34:00]
+loss before attack: 1.1087
+loss after attack: 1.2062
+bit flips: 20
+hamming_dist: 0
+  **Test** Prec@1 80.080 Prec@5 96.590 Loss 0.8566 Error@1 19.920
+iteration Time 2.044 (2.081)
+Attacking which layer:
+stage_1.1.conv_a
+Gradient Value at Attacking layer:
+tensor([1.6657e-04, 1.9577e-04, 0.0000e+00, 0.0000e+00, 1.1129e-04, 1.4789e-03,
+        4.9719e-06, 3.2794e-04, 6.6678e-04, 9.9498e-05], device='cuda:0')
+Centroid Value at Attacking Point
+-36.0
+------------
+36.0
+Centroid Value prior to Attacking Point
+tensor([-36., -36.,  36.,  36., -36., -36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+------------
+tensor([-36., -36.,  36.,  36.,  36.,  36., -36., -36.,  36.,  36.],
+       device='cuda:0')
+Deviation Value at Attacking Point
+-19.0
+------------
+-19.0
+Deviation Value prior to Attacking Point
+tensor([-19.,  15., -19.,  19.,  19., -19.,  19., -19.,  19., -18.],
+       device='cuda:0')
+------------
+tensor([-19.,  15., -19.,  19.,  19., -19.,  19., -19.,  19., -18.],
+       device='cuda:0')
+=> Running Accuracy is [89.67, 89.69, 89.44, 89.38, 89.24, 89.0, 88.68, 88.3, 87.68, 87.13, 86.56, 85.73, 85.05, 84.74, 84.07, 82.93, 82.37, 81.79, 81.16, 80.08]
+=> Running Loss is [0.33469044485092164, 0.33601027121543886, 0.3433807873249054, 0.3468131345272064, 0.3538244797706604, 0.3632000066757202, 0.38292088413238523, 0.39406819553375244, 0.41257414894104005, 0.4440541675567627, 0.48047561073303224, 0.5449540089607239, 0.5831327854156494, 0.6156245861053466, 0.6520562427520752, 0.6982109974861145, 0.7523182521820069, 0.7811067863464356, 0.8165746831893921, 0.8565732957839965]

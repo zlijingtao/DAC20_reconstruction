@@ -1,0 +1,738 @@
+Evaluate saved Model : ./test/cifar10_quan_resnet20_200_i1r1o1_adam0.0_1bit_no_regularize/model_best.pth.tar
+{'AD_sigma': 0.0, 'DA_sigma': 0.0, 'arch': 'quan_resnet20', 'attack_sample_size': 128, 'batch_size': 128, 'check_bit': 2, 'check_factor': 4.0, 'check_gsize': 4, 'data_path': './dataset/', 'dataset': 'cifar10', 'enable_bfa': True, 'enable_check': False, 'enable_oneshot': False, 'enable_rfa': False, 'enable_wma': False, 'evaluate': False, 'gpu_id': 0, 'input_M2D': 0.0, 'input_grain_size': [1, 1], 'input_num_bits': 1, 'k_top': 40, 'layer_id': 0, 'limit_row': 10, 'manualSeed': 5000, 'massive': 5, 'n_iter': 20, 'ngpu': 1, 'output_M2D': 0.0, 'output_grain_size': [1, 1], 'output_num_bits': 1, 'res_M2D': 0.0, 'res_grain_size': [1, 1], 'res_num_bits': 1, 'reset_weight': True, 'resume': './test/cifar10_quan_resnet20_200_i1r1o1_adam0.0_1bit_no_regularize/model_best.pth.tar', 'update_mask_flag': False, 'use_cuda': True, 'workers': 4}
+python version : 3.6.9 |Anaconda, Inc.| (default, Jul 30 2019, 19:07:31)  [GCC 7.3.0]
+torch  version : 1.1.0
+cudnn  version : 7600
+=> creating model 'quan_resnet20'
+=> loading checkpoint './test/cifar10_quan_resnet20_200_i1r1o1_adam0.0_1bit_no_regularize/model_best.pth.tar'
+=> loaded checkpoint './test/cifar10_quan_resnet20_200_i1r1o1_adam0.0_1bit_no_regularize/model_best.pth.tar'
+=> Seed is 125
+  **Test** Prec@1 89.230 Prec@5 99.580 Loss 0.5461 Error@1 10.770
+=> Original Accuracy is 89.23%
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.235 (0.235)  [2021-03-13 19:12:17]
+loss before attack: 0.0150
+loss after attack: 0.6717
+bit flips: 1
+  **Test** Prec@1 79.880 Prec@5 98.240 Loss 1.2364 Error@1 20.120
+iteration Time 1.875 (1.875)
+**********************************
+Iteration: [002/020]   Attack Time 0.187 (0.211)  [2021-03-13 19:12:19]
+loss before attack: 0.6717
+loss after attack: 4.5787
+bit flips: 2
+  **Test** Prec@1 58.190 Prec@5 90.610 Loss 4.5115 Error@1 41.810
+iteration Time 1.786 (1.831)
+**********************************
+Iteration: [003/020]   Attack Time 0.185 (0.202)  [2021-03-13 19:12:21]
+loss before attack: 4.5787
+loss after attack: 9.2751
+bit flips: 3
+  **Test** Prec@1 47.770 Prec@5 79.980 Loss 8.9323 Error@1 52.230
+iteration Time 1.903 (1.855)
+**********************************
+Iteration: [004/020]   Attack Time 0.187 (0.198)  [2021-03-13 19:12:23]
+loss before attack: 9.2751
+loss after attack: 16.3116
+bit flips: 4
+  **Test** Prec@1 35.960 Prec@5 68.990 Loss 14.9362 Error@1 64.040
+iteration Time 1.698 (1.816)
+**********************************
+Iteration: [005/020]   Attack Time 0.182 (0.195)  [2021-03-13 19:12:25]
+loss before attack: 16.3116
+loss after attack: 24.2105
+bit flips: 5
+  **Test** Prec@1 28.420 Prec@5 65.460 Loss 20.4767 Error@1 71.580
+iteration Time 1.999 (1.852)
+**********************************
+Iteration: [006/020]   Attack Time 0.172 (0.191)  [2021-03-13 19:12:27]
+loss before attack: 24.2105
+loss after attack: 29.5788
+bit flips: 6
+  **Test** Prec@1 24.780 Prec@5 63.840 Loss 25.7625 Error@1 75.220
+iteration Time 1.850 (1.852)
+**********************************
+Iteration: [007/020]   Attack Time 0.190 (0.191)  [2021-03-13 19:12:29]
+loss before attack: 29.5788
+loss after attack: 35.0830
+bit flips: 7
+  **Test** Prec@1 23.910 Prec@5 62.260 Loss 30.9524 Error@1 76.090
+iteration Time 1.794 (1.844)
+**********************************
+Iteration: [008/020]   Attack Time 0.175 (0.189)  [2021-03-13 19:12:31]
+loss before attack: 35.0830
+loss after attack: 45.7729
+bit flips: 8
+  **Test** Prec@1 20.100 Prec@5 58.800 Loss 42.2392 Error@1 79.900
+iteration Time 1.687 (1.824)
+**********************************
+Iteration: [009/020]   Attack Time 0.179 (0.188)  [2021-03-13 19:12:33]
+loss before attack: 45.7729
+loss after attack: 53.1446
+bit flips: 9
+  **Test** Prec@1 19.410 Prec@5 57.170 Loss 48.7616 Error@1 80.590
+iteration Time 2.003 (1.844)
+**********************************
+Iteration: [010/020]   Attack Time 0.184 (0.188)  [2021-03-13 19:12:35]
+loss before attack: 53.1446
+loss after attack: 61.7657
+bit flips: 10
+  **Test** Prec@1 18.540 Prec@5 56.450 Loss 56.9362 Error@1 81.460
+iteration Time 1.945 (1.854)
+**********************************
+Iteration: [011/020]   Attack Time 0.188 (0.188)  [2021-03-13 19:12:37]
+loss before attack: 61.7657
+loss after attack: 70.7402
+bit flips: 11
+  **Test** Prec@1 18.180 Prec@5 56.280 Loss 64.2234 Error@1 81.820
+iteration Time 1.744 (1.844)
+**********************************
+Iteration: [012/020]   Attack Time 0.174 (0.186)  [2021-03-13 19:12:39]
+loss before attack: 70.7402
+loss after attack: 85.7737
+bit flips: 12
+  **Test** Prec@1 16.580 Prec@5 53.720 Loss 78.2846 Error@1 83.420
+iteration Time 2.164 (1.871)
+**********************************
+Iteration: [013/020]   Attack Time 0.188 (0.187)  [2021-03-13 19:12:42]
+loss before attack: 85.7737
+loss after attack: 98.4501
+bit flips: 13
+  **Test** Prec@1 15.880 Prec@5 53.160 Loss 90.5332 Error@1 84.120
+iteration Time 1.987 (1.880)
+**********************************
+Iteration: [014/020]   Attack Time 0.176 (0.186)  [2021-03-13 19:12:44]
+loss before attack: 98.4501
+loss after attack: 111.6526
+bit flips: 14
+  **Test** Prec@1 15.410 Prec@5 53.100 Loss 101.1431 Error@1 84.590
+iteration Time 1.788 (1.873)
+**********************************
+Iteration: [015/020]   Attack Time 0.172 (0.185)  [2021-03-13 19:12:46]
+loss before attack: 111.6526
+loss after attack: 132.4001
+bit flips: 15
+  **Test** Prec@1 14.370 Prec@5 52.360 Loss 120.3633 Error@1 85.630
+iteration Time 2.000 (1.882)
+**********************************
+Iteration: [016/020]   Attack Time 0.195 (0.186)  [2021-03-13 19:12:48]
+loss before attack: 132.4001
+loss after attack: 150.1989
+bit flips: 16
+  **Test** Prec@1 13.810 Prec@5 51.870 Loss 136.6957 Error@1 86.190
+iteration Time 1.941 (1.885)
+**********************************
+Iteration: [017/020]   Attack Time 0.181 (0.185)  [2021-03-13 19:12:50]
+loss before attack: 150.1989
+loss after attack: 171.1458
+bit flips: 17
+  **Test** Prec@1 13.430 Prec@5 51.580 Loss 154.7031 Error@1 86.570
+iteration Time 1.936 (1.888)
+**********************************
+Iteration: [018/020]   Attack Time 0.183 (0.185)  [2021-03-13 19:12:52]
+loss before attack: 171.1458
+loss after attack: 194.4956
+bit flips: 18
+  **Test** Prec@1 13.090 Prec@5 51.380 Loss 173.1183 Error@1 86.910
+iteration Time 2.004 (1.895)
+**********************************
+Iteration: [019/020]   Attack Time 0.179 (0.185)  [2021-03-13 19:12:54]
+loss before attack: 194.4956
+loss after attack: 219.8017
+bit flips: 19
+  **Test** Prec@1 12.520 Prec@5 51.370 Loss 195.1525 Error@1 87.480
+iteration Time 1.934 (1.897)
+**********************************
+Iteration: [020/020]   Attack Time 0.203 (0.186)  [2021-03-13 19:12:56]
+loss before attack: 219.8017
+loss after attack: 248.0864
+bit flips: 20
+  **Test** Prec@1 12.240 Prec@5 51.180 Loss 221.3758 Error@1 87.760
+iteration Time 2.098 (1.907)
+End of searching, dump all the bits to the target system and perform the attack
+Accuracy after PBFA attack:
+  **Test** Prec@1 12.240 Prec@5 51.180 Loss 221.3758 Error@1 87.760
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.202 (0.202)  [2021-03-13 19:13:01]
+loss before attack: 0.0171
+loss after attack: 0.1509
+bit flips: 21
+  **Test** Prec@1 87.980 Prec@5 99.400 Loss 0.6069 Error@1 12.020
+iteration Time 2.141 (2.141)
+**********************************
+Iteration: [002/020]   Attack Time 0.182 (0.192)  [2021-03-13 19:13:03]
+loss before attack: 0.1509
+loss after attack: 0.5660
+bit flips: 22
+  **Test** Prec@1 82.660 Prec@5 98.870 Loss 0.9363 Error@1 17.340
+iteration Time 1.914 (2.027)
+**********************************
+Iteration: [003/020]   Attack Time 0.175 (0.186)  [2021-03-13 19:13:05]
+loss before attack: 0.5660
+loss after attack: 1.1878
+bit flips: 23
+  **Test** Prec@1 74.170 Prec@5 97.570 Loss 1.5079 Error@1 25.830
+iteration Time 1.891 (1.982)
+**********************************
+Iteration: [004/020]   Attack Time 0.193 (0.188)  [2021-03-13 19:13:07]
+loss before attack: 1.1878
+loss after attack: 2.0476
+bit flips: 24
+  **Test** Prec@1 64.570 Prec@5 95.270 Loss 2.2251 Error@1 35.430
+iteration Time 1.687 (1.908)
+**********************************
+Iteration: [005/020]   Attack Time 0.179 (0.186)  [2021-03-13 19:13:09]
+loss before attack: 2.0476
+loss after attack: 4.0985
+bit flips: 25
+  **Test** Prec@1 45.010 Prec@5 89.750 Loss 4.0069 Error@1 54.990
+iteration Time 1.958 (1.918)
+**********************************
+Iteration: [006/020]   Attack Time 0.174 (0.184)  [2021-03-13 19:13:11]
+loss before attack: 4.0985
+loss after attack: 8.4180
+bit flips: 26
+  **Test** Prec@1 24.810 Prec@5 75.200 Loss 8.3437 Error@1 75.190
+iteration Time 1.857 (1.908)
+**********************************
+Iteration: [007/020]   Attack Time 0.177 (0.183)  [2021-03-13 19:13:13]
+loss before attack: 8.4180
+loss after attack: 13.5624
+bit flips: 27
+  **Test** Prec@1 13.650 Prec@5 64.250 Loss 13.2841 Error@1 86.350
+iteration Time 2.121 (1.938)
+**********************************
+Iteration: [008/020]   Attack Time 0.184 (0.183)  [2021-03-13 19:13:16]
+loss before attack: 13.5624
+loss after attack: 17.6664
+bit flips: 28
+  **Test** Prec@1 10.830 Prec@5 58.900 Loss 17.7125 Error@1 89.170
+iteration Time 1.871 (1.930)
+**********************************
+Iteration: [009/020]   Attack Time 0.193 (0.184)  [2021-03-13 19:13:18]
+loss before attack: 17.6664
+loss after attack: 21.2691
+bit flips: 29
+  **Test** Prec@1 10.400 Prec@5 58.120 Loss 21.3296 Error@1 89.600
+iteration Time 2.238 (1.964)
+**********************************
+Iteration: [010/020]   Attack Time 0.189 (0.185)  [2021-03-13 19:13:20]
+loss before attack: 21.2691
+loss after attack: 25.3440
+bit flips: 30
+  **Test** Prec@1 10.200 Prec@5 56.570 Loss 23.8332 Error@1 89.800
+iteration Time 1.853 (1.953)
+**********************************
+Iteration: [011/020]   Attack Time 0.177 (0.184)  [2021-03-13 19:13:22]
+loss before attack: 25.3440
+loss after attack: 29.6636
+bit flips: 31
+  **Test** Prec@1 10.110 Prec@5 55.190 Loss 28.0855 Error@1 89.890
+iteration Time 1.809 (1.940)
+**********************************
+Iteration: [012/020]   Attack Time 0.192 (0.185)  [2021-03-13 19:13:24]
+loss before attack: 29.6636
+loss after attack: 34.0711
+bit flips: 32
+  **Test** Prec@1 10.110 Prec@5 54.620 Loss 31.9515 Error@1 89.890
+iteration Time 1.712 (1.921)
+**********************************
+Iteration: [013/020]   Attack Time 0.202 (0.186)  [2021-03-13 19:13:26]
+loss before attack: 34.0711
+loss after attack: 38.6699
+bit flips: 33
+  **Test** Prec@1 10.100 Prec@5 54.200 Loss 36.2485 Error@1 89.900
+iteration Time 1.765 (1.909)
+**********************************
+Iteration: [014/020]   Attack Time 0.188 (0.186)  [2021-03-13 19:13:28]
+loss before attack: 38.6699
+loss after attack: 43.3171
+bit flips: 34
+  **Test** Prec@1 10.070 Prec@5 53.780 Loss 40.4594 Error@1 89.930
+iteration Time 2.031 (1.918)
+**********************************
+Iteration: [015/020]   Attack Time 0.178 (0.186)  [2021-03-13 19:13:30]
+loss before attack: 43.3171
+loss after attack: 48.5638
+bit flips: 35
+  **Test** Prec@1 10.000 Prec@5 52.190 Loss 46.3880 Error@1 90.000
+iteration Time 2.062 (1.927)
+**********************************
+Iteration: [016/020]   Attack Time 0.202 (0.187)  [2021-03-13 19:13:33]
+loss before attack: 48.5638
+loss after attack: 54.1809
+bit flips: 36
+  **Test** Prec@1 10.000 Prec@5 52.130 Loss 51.7306 Error@1 90.000
+iteration Time 1.910 (1.926)
+**********************************
+Iteration: [017/020]   Attack Time 0.194 (0.187)  [2021-03-13 19:13:35]
+loss before attack: 54.1809
+loss after attack: 60.5991
+bit flips: 37
+  **Test** Prec@1 10.000 Prec@5 52.160 Loss 58.0123 Error@1 90.000
+iteration Time 1.951 (1.928)
+**********************************
+Iteration: [018/020]   Attack Time 0.185 (0.187)  [2021-03-13 19:13:37]
+loss before attack: 60.5991
+loss after attack: 68.3987
+bit flips: 38
+  **Test** Prec@1 10.000 Prec@5 51.630 Loss 65.3088 Error@1 90.000
+iteration Time 2.325 (1.950)
+**********************************
+Iteration: [019/020]   Attack Time 0.206 (0.188)  [2021-03-13 19:13:39]
+loss before attack: 68.3987
+loss after attack: 76.7314
+bit flips: 39
+  **Test** Prec@1 10.000 Prec@5 51.990 Loss 73.5187 Error@1 90.000
+iteration Time 2.076 (1.956)
+**********************************
+Iteration: [020/020]   Attack Time 0.191 (0.188)  [2021-03-13 19:13:42]
+loss before attack: 76.7314
+loss after attack: 86.5965
+bit flips: 40
+  **Test** Prec@1 10.000 Prec@5 51.820 Loss 83.0377 Error@1 90.000
+iteration Time 1.903 (1.954)
+End of searching, dump all the bits to the target system and perform the attack
+Accuracy after PBFA attack:
+  **Test** Prec@1 10.000 Prec@5 51.820 Loss 83.0377 Error@1 90.000
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.200 (0.200)  [2021-03-13 19:13:46]
+loss before attack: 0.0098
+loss after attack: 0.0629
+bit flips: 41
+  **Test** Prec@1 87.350 Prec@5 99.460 Loss 0.6608 Error@1 12.650
+iteration Time 2.183 (2.183)
+**********************************
+Iteration: [002/020]   Attack Time 0.176 (0.188)  [2021-03-13 19:13:49]
+loss before attack: 0.0629
+loss after attack: 0.3030
+bit flips: 42
+  **Test** Prec@1 83.780 Prec@5 99.240 Loss 0.8813 Error@1 16.220
+iteration Time 1.809 (1.996)
+**********************************
+Iteration: [003/020]   Attack Time 0.185 (0.187)  [2021-03-13 19:13:51]
+loss before attack: 0.3030
+loss after attack: 0.6354
+bit flips: 43
+  **Test** Prec@1 75.320 Prec@5 98.500 Loss 1.5300 Error@1 24.680
+iteration Time 1.956 (1.983)
+**********************************
+Iteration: [004/020]   Attack Time 0.184 (0.187)  [2021-03-13 19:13:53]
+loss before attack: 0.6354
+loss after attack: 1.1062
+bit flips: 44
+  **Test** Prec@1 66.640 Prec@5 97.670 Loss 2.5105 Error@1 33.360
+iteration Time 1.797 (1.936)
+**********************************
+Iteration: [005/020]   Attack Time 0.180 (0.185)  [2021-03-13 19:13:55]
+loss before attack: 1.1062
+loss after attack: 2.0426
+bit flips: 45
+  **Test** Prec@1 56.720 Prec@5 95.940 Loss 3.9533 Error@1 43.280
+iteration Time 1.931 (1.935)
+**********************************
+Iteration: [006/020]   Attack Time 0.182 (0.185)  [2021-03-13 19:13:57]
+loss before attack: 2.0426
+loss after attack: 3.6710
+bit flips: 46
+  **Test** Prec@1 45.860 Prec@5 93.910 Loss 5.9190 Error@1 54.140
+iteration Time 1.856 (1.922)
+**********************************
+Iteration: [007/020]   Attack Time 0.186 (0.185)  [2021-03-13 19:13:59]
+loss before attack: 3.6710
+loss after attack: 7.0741
+bit flips: 47
+  **Test** Prec@1 32.760 Prec@5 90.590 Loss 9.7437 Error@1 67.240
+iteration Time 1.962 (1.928)
+**********************************
+Iteration: [008/020]   Attack Time 0.184 (0.185)  [2021-03-13 19:14:01]
+loss before attack: 7.0741
+loss after attack: 13.0359
+bit flips: 48
+  **Test** Prec@1 22.970 Prec@5 83.070 Loss 15.3629 Error@1 77.030
+iteration Time 1.786 (1.910)
+**********************************
+Iteration: [009/020]   Attack Time 0.189 (0.185)  [2021-03-13 19:14:03]
+loss before attack: 13.0359
+loss after attack: 19.7151
+bit flips: 49
+  **Test** Prec@1 17.440 Prec@5 77.240 Loss 21.3567 Error@1 82.560
+iteration Time 1.923 (1.912)
+**********************************
+Iteration: [010/020]   Attack Time 0.194 (0.186)  [2021-03-13 19:14:05]
+loss before attack: 19.7151
+loss after attack: 26.7709
+bit flips: 50
+  **Test** Prec@1 13.630 Prec@5 67.750 Loss 27.0945 Error@1 86.370
+iteration Time 1.955 (1.916)
+**********************************
+Iteration: [011/020]   Attack Time 0.190 (0.186)  [2021-03-13 19:14:07]
+loss before attack: 26.7709
+loss after attack: 33.2660
+bit flips: 51
+  **Test** Prec@1 11.770 Prec@5 61.030 Loss 33.0751 Error@1 88.230
+iteration Time 1.819 (1.907)
+**********************************
+Iteration: [012/020]   Attack Time 0.199 (0.187)  [2021-03-13 19:14:09]
+loss before attack: 33.2660
+loss after attack: 40.2055
+bit flips: 52
+  **Test** Prec@1 10.970 Prec@5 61.900 Loss 40.5815 Error@1 89.030
+iteration Time 1.975 (1.913)
+**********************************
+Iteration: [013/020]   Attack Time 0.176 (0.187)  [2021-03-13 19:14:11]
+loss before attack: 40.2055
+loss after attack: 47.9811
+bit flips: 53
+  **Test** Prec@1 10.620 Prec@5 58.030 Loss 47.8563 Error@1 89.380
+iteration Time 1.964 (1.917)
+**********************************
+Iteration: [014/020]   Attack Time 0.197 (0.187)  [2021-03-13 19:14:14]
+loss before attack: 47.9811
+loss after attack: 58.0206
+bit flips: 54
+  **Test** Prec@1 10.460 Prec@5 62.130 Loss 58.3430 Error@1 89.540
+iteration Time 1.888 (1.915)
+**********************************
+Iteration: [015/020]   Attack Time 0.186 (0.187)  [2021-03-13 19:14:16]
+loss before attack: 58.0206
+loss after attack: 67.8180
+bit flips: 55
+  **Test** Prec@1 10.080 Prec@5 59.710 Loss 69.2043 Error@1 89.920
+iteration Time 1.781 (1.906)
+**********************************
+Iteration: [016/020]   Attack Time 0.191 (0.188)  [2021-03-13 19:14:18]
+loss before attack: 67.8180
+loss after attack: 78.2559
+bit flips: 56
+  **Test** Prec@1 10.030 Prec@5 58.040 Loss 79.5813 Error@1 89.970
+iteration Time 2.169 (1.922)
+**********************************
+Iteration: [017/020]   Attack Time 0.177 (0.187)  [2021-03-13 19:14:20]
+loss before attack: 78.2559
+loss after attack: 89.2198
+bit flips: 57
+  **Test** Prec@1 10.030 Prec@5 55.700 Loss 90.1077 Error@1 89.970
+iteration Time 1.783 (1.914)
+**********************************
+Iteration: [018/020]   Attack Time 0.194 (0.187)  [2021-03-13 19:14:22]
+loss before attack: 89.2198
+loss after attack: 103.9865
+bit flips: 58
+  **Test** Prec@1 10.000 Prec@5 52.270 Loss 105.0059 Error@1 90.000
+iteration Time 1.780 (1.907)
+**********************************
+Iteration: [019/020]   Attack Time 0.196 (0.188)  [2021-03-13 19:14:24]
+loss before attack: 103.9865
+loss after attack: 122.8638
+bit flips: 59
+  **Test** Prec@1 10.000 Prec@5 50.890 Loss 123.0162 Error@1 90.000
+iteration Time 1.750 (1.898)
+**********************************
+Iteration: [020/020]   Attack Time 0.189 (0.188)  [2021-03-13 19:14:26]
+loss before attack: 122.8638
+loss after attack: 143.6282
+bit flips: 60
+  **Test** Prec@1 10.000 Prec@5 49.520 Loss 141.3995 Error@1 90.000
+iteration Time 2.127 (1.910)
+End of searching, dump all the bits to the target system and perform the attack
+Accuracy after PBFA attack:
+  **Test** Prec@1 10.000 Prec@5 49.520 Loss 141.3995 Error@1 90.000
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.202 (0.202)  [2021-03-13 19:14:30]
+loss before attack: 0.0121
+loss after attack: 0.0977
+bit flips: 61
+  **Test** Prec@1 87.380 Prec@5 99.410 Loss 0.6393 Error@1 12.620
+iteration Time 1.960 (1.960)
+**********************************
+Iteration: [002/020]   Attack Time 0.195 (0.198)  [2021-03-13 19:14:33]
+loss before attack: 0.0977
+loss after attack: 0.6176
+bit flips: 62
+  **Test** Prec@1 81.820 Prec@5 98.730 Loss 0.9448 Error@1 18.180
+iteration Time 1.903 (1.931)
+**********************************
+Iteration: [003/020]   Attack Time 0.186 (0.194)  [2021-03-13 19:14:35]
+loss before attack: 0.6176
+loss after attack: 1.4330
+bit flips: 63
+  **Test** Prec@1 74.580 Prec@5 97.120 Loss 1.4349 Error@1 25.420
+iteration Time 1.709 (1.857)
+**********************************
+Iteration: [004/020]   Attack Time 0.182 (0.191)  [2021-03-13 19:14:37]
+loss before attack: 1.4330
+loss after attack: 2.7546
+bit flips: 64
+  **Test** Prec@1 63.270 Prec@5 94.050 Loss 2.4918 Error@1 36.730
+iteration Time 2.101 (1.918)
+**********************************
+Iteration: [005/020]   Attack Time 0.177 (0.188)  [2021-03-13 19:14:39]
+loss before attack: 2.7546
+loss after attack: 4.9399
+bit flips: 65
+  **Test** Prec@1 52.550 Prec@5 89.220 Loss 3.9856 Error@1 47.450
+iteration Time 1.767 (1.888)
+**********************************
+Iteration: [006/020]   Attack Time 0.185 (0.188)  [2021-03-13 19:14:41]
+loss before attack: 4.9399
+loss after attack: 8.3463
+bit flips: 66
+  **Test** Prec@1 41.020 Prec@5 82.150 Loss 7.1807 Error@1 58.980
+iteration Time 1.848 (1.881)
+**********************************
+Iteration: [007/020]   Attack Time 0.187 (0.188)  [2021-03-13 19:14:43]
+loss before attack: 8.3463
+loss after attack: 12.7464
+bit flips: 67
+  **Test** Prec@1 34.570 Prec@5 76.640 Loss 11.3572 Error@1 65.430
+iteration Time 1.853 (1.877)
+**********************************
+Iteration: [008/020]   Attack Time 0.183 (0.187)  [2021-03-13 19:14:45]
+loss before attack: 12.7464
+loss after attack: 18.2919
+bit flips: 68
+  **Test** Prec@1 31.820 Prec@5 74.510 Loss 16.2289 Error@1 68.180
+iteration Time 1.912 (1.882)
+**********************************
+Iteration: [009/020]   Attack Time 0.185 (0.187)  [2021-03-13 19:14:47]
+loss before attack: 18.2919
+loss after attack: 25.4639
+bit flips: 69
+  **Test** Prec@1 25.920 Prec@5 67.580 Loss 23.0694 Error@1 74.080
+iteration Time 2.229 (1.920)
+**********************************
+Iteration: [010/020]   Attack Time 0.188 (0.187)  [2021-03-13 19:14:49]
+loss before attack: 25.4639
+loss after attack: 32.0544
+bit flips: 70
+  **Test** Prec@1 24.740 Prec@5 67.180 Loss 27.9638 Error@1 75.260
+iteration Time 2.127 (1.941)
+**********************************
+Iteration: [011/020]   Attack Time 0.186 (0.187)  [2021-03-13 19:14:52]
+loss before attack: 32.0544
+loss after attack: 39.1601
+bit flips: 71
+  **Test** Prec@1 23.890 Prec@5 67.790 Loss 33.4486 Error@1 76.110
+iteration Time 1.560 (1.906)
+**********************************
+Iteration: [012/020]   Attack Time 0.180 (0.186)  [2021-03-13 19:14:53]
+loss before attack: 39.1601
+loss after attack: 48.5890
+bit flips: 72
+  **Test** Prec@1 20.200 Prec@5 62.500 Loss 42.5174 Error@1 79.800
+iteration Time 1.948 (1.910)
+**********************************
+Iteration: [013/020]   Attack Time 0.174 (0.185)  [2021-03-13 19:14:56]
+loss before attack: 48.5890
+loss after attack: 59.1184
+bit flips: 73
+  **Test** Prec@1 19.210 Prec@5 63.660 Loss 50.4598 Error@1 80.790
+iteration Time 2.099 (1.924)
+**********************************
+Iteration: [014/020]   Attack Time 0.190 (0.186)  [2021-03-13 19:14:58]
+loss before attack: 59.1184
+loss after attack: 69.5429
+bit flips: 74
+  **Test** Prec@1 18.570 Prec@5 62.560 Loss 59.1181 Error@1 81.430
+iteration Time 1.732 (1.911)
+**********************************
+Iteration: [015/020]   Attack Time 0.184 (0.186)  [2021-03-13 19:15:00]
+loss before attack: 69.5429
+loss after attack: 83.2724
+bit flips: 75
+  **Test** Prec@1 17.050 Prec@5 58.690 Loss 71.4633 Error@1 82.950
+iteration Time 1.745 (1.900)
+**********************************
+Iteration: [016/020]   Attack Time 0.188 (0.186)  [2021-03-13 19:15:02]
+loss before attack: 83.2724
+loss after attack: 98.1367
+bit flips: 76
+  **Test** Prec@1 16.490 Prec@5 59.650 Loss 82.4134 Error@1 83.510
+iteration Time 2.377 (1.929)
+**********************************
+Iteration: [017/020]   Attack Time 0.193 (0.186)  [2021-03-13 19:15:04]
+loss before attack: 98.1367
+loss after attack: 115.1077
+bit flips: 77
+  **Test** Prec@1 15.380 Prec@5 57.140 Loss 97.9913 Error@1 84.620
+iteration Time 1.756 (1.919)
+**********************************
+Iteration: [018/020]   Attack Time 0.182 (0.186)  [2021-03-13 19:15:06]
+loss before attack: 115.1077
+loss after attack: 132.3363
+bit flips: 78
+  **Test** Prec@1 14.770 Prec@5 57.180 Loss 110.5894 Error@1 85.230
+iteration Time 1.997 (1.924)
+**********************************
+Iteration: [019/020]   Attack Time 0.190 (0.186)  [2021-03-13 19:15:08]
+loss before attack: 132.3363
+loss after attack: 152.2720
+bit flips: 79
+  **Test** Prec@1 14.510 Prec@5 56.510 Loss 127.6944 Error@1 85.490
+iteration Time 1.833 (1.919)
+**********************************
+Iteration: [020/020]   Attack Time 0.187 (0.186)  [2021-03-13 19:15:10]
+loss before attack: 152.2720
+loss after attack: 175.8154
+bit flips: 80
+  **Test** Prec@1 13.770 Prec@5 55.060 Loss 148.9100 Error@1 86.230
+iteration Time 2.178 (1.932)
+End of searching, dump all the bits to the target system and perform the attack
+Accuracy after PBFA attack:
+  **Test** Prec@1 13.770 Prec@5 55.060 Loss 148.9100 Error@1 86.230
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.196 (0.196)  [2021-03-13 19:15:15]
+loss before attack: 0.0154
+loss after attack: 0.3386
+bit flips: 81
+  **Test** Prec@1 85.620 Prec@5 99.250 Loss 0.7362 Error@1 14.380
+iteration Time 2.062 (2.062)
+**********************************
+Iteration: [002/020]   Attack Time 0.175 (0.185)  [2021-03-13 19:15:17]
+loss before attack: 0.3386
+loss after attack: 1.2141
+bit flips: 82
+  **Test** Prec@1 75.740 Prec@5 97.130 Loss 1.3349 Error@1 24.260
+iteration Time 1.831 (1.946)
+**********************************
+Iteration: [003/020]   Attack Time 0.179 (0.183)  [2021-03-13 19:15:19]
+loss before attack: 1.2141
+loss after attack: 2.2487
+bit flips: 83
+  **Test** Prec@1 62.510 Prec@5 94.100 Loss 2.5313 Error@1 37.490
+iteration Time 1.822 (1.905)
+**********************************
+Iteration: [004/020]   Attack Time 0.181 (0.183)  [2021-03-13 19:15:21]
+loss before attack: 2.2487
+loss after attack: 5.1656
+bit flips: 84
+  **Test** Prec@1 41.910 Prec@5 85.540 Loss 6.1804 Error@1 58.090
+iteration Time 1.772 (1.872)
+**********************************
+Iteration: [005/020]   Attack Time 0.185 (0.183)  [2021-03-13 19:15:23]
+loss before attack: 5.1656
+loss after attack: 7.8651
+bit flips: 85
+  **Test** Prec@1 36.470 Prec@5 80.870 Loss 8.8495 Error@1 63.530
+iteration Time 1.786 (1.854)
+**********************************
+Iteration: [006/020]   Attack Time 0.192 (0.184)  [2021-03-13 19:15:25]
+loss before attack: 7.8651
+loss after attack: 12.5152
+bit flips: 86
+  **Test** Prec@1 28.550 Prec@5 73.710 Loss 13.3434 Error@1 71.450
+iteration Time 1.664 (1.823)
+**********************************
+Iteration: [007/020]   Attack Time 0.186 (0.185)  [2021-03-13 19:15:27]
+loss before attack: 12.5152
+loss after attack: 17.3373
+bit flips: 87
+  **Test** Prec@1 23.720 Prec@5 68.840 Loss 18.6323 Error@1 76.280
+iteration Time 2.077 (1.859)
+**********************************
+Iteration: [008/020]   Attack Time 0.188 (0.185)  [2021-03-13 19:15:29]
+loss before attack: 17.3373
+loss after attack: 23.3648
+bit flips: 88
+  **Test** Prec@1 19.500 Prec@5 65.660 Loss 24.4436 Error@1 80.500
+iteration Time 1.847 (1.858)
+**********************************
+Iteration: [009/020]   Attack Time 0.188 (0.185)  [2021-03-13 19:15:31]
+loss before attack: 23.3648
+loss after attack: 29.9341
+bit flips: 89
+  **Test** Prec@1 16.750 Prec@5 62.910 Loss 31.9991 Error@1 83.250
+iteration Time 1.965 (1.869)
+**********************************
+Iteration: [010/020]   Attack Time 0.210 (0.188)  [2021-03-13 19:15:33]
+loss before attack: 29.9341
+loss after attack: 37.4784
+bit flips: 90
+  **Test** Prec@1 14.770 Prec@5 61.080 Loss 39.5425 Error@1 85.230
+iteration Time 1.863 (1.869)
+**********************************
+Iteration: [011/020]   Attack Time 0.182 (0.187)  [2021-03-13 19:15:35]
+loss before attack: 37.4784
+loss after attack: 45.2869
+bit flips: 91
+  **Test** Prec@1 13.640 Prec@5 59.660 Loss 47.7535 Error@1 86.360
+iteration Time 1.990 (1.880)
+**********************************
+Iteration: [012/020]   Attack Time 0.180 (0.187)  [2021-03-13 19:15:38]
+loss before attack: 45.2869
+loss after attack: 53.2395
+bit flips: 92
+  **Test** Prec@1 13.030 Prec@5 57.710 Loss 56.3425 Error@1 86.970
+iteration Time 1.825 (1.875)
+**********************************
+Iteration: [013/020]   Attack Time 0.187 (0.187)  [2021-03-13 19:15:40]
+loss before attack: 53.2395
+loss after attack: 62.2951
+bit flips: 93
+  **Test** Prec@1 12.170 Prec@5 56.470 Loss 64.8921 Error@1 87.830
+iteration Time 1.971 (1.883)
+**********************************
+Iteration: [014/020]   Attack Time 0.183 (0.186)  [2021-03-13 19:15:42]
+loss before attack: 62.2951
+loss after attack: 75.4607
+bit flips: 94
+  **Test** Prec@1 11.900 Prec@5 56.140 Loss 78.5302 Error@1 88.100
+iteration Time 1.957 (1.888)
+**********************************
+Iteration: [015/020]   Attack Time 0.193 (0.187)  [2021-03-13 19:15:44]
+loss before attack: 75.4607
+loss after attack: 90.1768
+bit flips: 95
+  **Test** Prec@1 11.520 Prec@5 55.320 Loss 92.9685 Error@1 88.480
+iteration Time 2.023 (1.897)
+**********************************
+Iteration: [016/020]   Attack Time 0.177 (0.186)  [2021-03-13 19:15:46]
+loss before attack: 90.1768
+loss after attack: 106.4767
+bit flips: 96
+  **Test** Prec@1 11.470 Prec@5 55.060 Loss 110.6972 Error@1 88.530
+iteration Time 1.747 (1.888)
+**********************************
+Iteration: [017/020]   Attack Time 0.184 (0.186)  [2021-03-13 19:15:48]
+loss before attack: 106.4767
+loss after attack: 121.7954
+bit flips: 97
+  **Test** Prec@1 11.080 Prec@5 54.260 Loss 127.1902 Error@1 88.920
+iteration Time 1.791 (1.882)
+**********************************
+Iteration: [018/020]   Attack Time 0.201 (0.187)  [2021-03-13 19:15:50]
+loss before attack: 121.7954
+loss after attack: 138.5615
+bit flips: 98
+  **Test** Prec@1 10.890 Prec@5 53.540 Loss 144.7485 Error@1 89.110
+iteration Time 1.954 (1.886)
+**********************************
+Iteration: [019/020]   Attack Time 0.196 (0.187)  [2021-03-13 19:15:52]
+loss before attack: 138.5615
+loss after attack: 156.1305
+bit flips: 99
+  **Test** Prec@1 11.280 Prec@5 53.490 Loss 164.7700 Error@1 88.720
+iteration Time 1.777 (1.880)
+**********************************
+Iteration: [020/020]   Attack Time 0.178 (0.187)  [2021-03-13 19:15:54]
+loss before attack: 156.1305
+loss after attack: 181.5412
+bit flips: 100
+  **Test** Prec@1 10.710 Prec@5 53.110 Loss 191.0533 Error@1 89.290
+iteration Time 1.866 (1.879)
+End of searching, dump all the bits to the target system and perform the attack
+Accuracy after PBFA attack:
+  **Test** Prec@1 10.710 Prec@5 53.110 Loss 191.0533 Error@1 89.290
+=> Average Attacked Accuracy is 11.344000000000001%
+Massive Test on data integrity Finished!

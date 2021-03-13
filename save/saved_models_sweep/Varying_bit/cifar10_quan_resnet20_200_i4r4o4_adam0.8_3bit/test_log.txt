@@ -1,0 +1,264 @@
+Evaluate saved Model : /home/jingtao1/TNN/save/2019-11-19/cifar10_quan_resnet20_200_i4r4o4_adam0.8_4bit/model_best.pth.tar
+{'AD_sigma': 0.0, 'DA_sigma': 0.0, 'arch': 'quan_resnet20', 'attack_sample_size': 128, 'batch_size': 128, 'data_path': './dataset/', 'dataset': 'cifar10', 'enable_bfa': True, 'enable_oneshot': False, 'enable_rfa': False, 'evaluate': False, 'gpu_id': 0, 'input_M2D': 0.8, 'input_grain_size': [1, 4], 'input_num_bits': 3, 'k_top': 40, 'manualSeed': 5004, 'n_iter': 20, 'ngpu': 1, 'output_M2D': 0.8, 'output_grain_size': [1, 4], 'output_num_bits': 3, 'res_M2D': 0.8, 'res_grain_size': [1, 4], 'res_num_bits': 3, 'reset_weight': True, 'resume': '/home/jingtao1/TNN/save/2019-11-19/cifar10_quan_resnet20_200_i4r4o4_adam0.8_4bit/model_best.pth.tar', 'update_mask_flag': False, 'use_cuda': True, 'workers': 4}
+python version : 3.6.9 |Anaconda, Inc.| (default, Jul 30 2019, 19:07:31)  [GCC 7.3.0]
+torch  version : 1.1.0
+cudnn  version : 7600
+=> creating model 'quan_resnet20'
+=> network :
+ CifarResNet(
+  (conv_1_3x3): quan_Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (stage_1): Sequential(
+    (0): ResNetBasicblock(
+      (conv_a): quan_Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): ResNetBasicblock(
+      (conv_a): quan_Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): ResNetBasicblock(
+      (conv_a): quan_Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (stage_2): Sequential(
+    (0): ResNetBasicblock(
+      (conv_a): quan_Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): DownsampleA(
+        (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+      )
+    )
+    (1): ResNetBasicblock(
+      (conv_a): quan_Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): ResNetBasicblock(
+      (conv_a): quan_Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (stage_3): Sequential(
+    (0): ResNetBasicblock(
+      (conv_a): quan_Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): DownsampleA(
+        (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+      )
+    )
+    (1): ResNetBasicblock(
+      (conv_a): quan_Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): ResNetBasicblock(
+      (conv_a): quan_Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv_b): quan_Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+  (classifier): quan_Linear(in_features=64, out_features=10, bias=True)
+)
+=> loading checkpoint '/home/jingtao1/TNN/save/2019-11-19/cifar10_quan_resnet20_200_i4r4o4_adam0.8_4bit/model_best.pth.tar'
+=> loaded checkpoint '/home/jingtao1/TNN/save/2019-11-19/cifar10_quan_resnet20_200_i4r4o4_adam0.8_4bit/model_best.pth.tar'
+  **Test** Prec@1 90.830 Prec@5 99.750 Error@1 9.170
+k_top is set to 40
+Attack sample size is 128
+**********************************
+Iteration: [001/020]   Attack Time 0.286 (0.286)  [2019-11-20 17:22:30]
+loss before attack: 0.0476
+loss after attack: 0.0742
+bit flips: 1
+hamming_dist: 0
+  **Test** Prec@1 90.170 Prec@5 99.670 Error@1 9.830
+actual loss: 0.3946
+iteration Time 2.170 (2.170)
+**********************************
+Iteration: [002/020]   Attack Time 0.221 (0.253)  [2019-11-20 17:22:32]
+loss before attack: 0.0742
+loss after attack: 0.0958
+bit flips: 2
+hamming_dist: 0
+  **Test** Prec@1 89.850 Prec@5 99.690 Error@1 10.150
+actual loss: 0.3992
+iteration Time 1.949 (2.059)
+**********************************
+Iteration: [003/020]   Attack Time 0.227 (0.245)  [2019-11-20 17:22:34]
+loss before attack: 0.0958
+loss after attack: 0.1282
+bit flips: 3
+hamming_dist: 0
+  **Test** Prec@1 89.870 Prec@5 99.640 Error@1 10.130
+actual loss: 0.4049
+iteration Time 2.015 (2.045)
+**********************************
+Iteration: [004/020]   Attack Time 0.198 (0.233)  [2019-11-20 17:22:36]
+loss before attack: 0.1282
+loss after attack: 0.1615
+bit flips: 4
+hamming_dist: 0
+  **Test** Prec@1 89.380 Prec@5 99.600 Error@1 10.620
+actual loss: 0.4241
+iteration Time 1.951 (2.021)
+**********************************
+Iteration: [005/020]   Attack Time 0.218 (0.230)  [2019-11-20 17:22:39]
+loss before attack: 0.1615
+loss after attack: 0.2318
+bit flips: 5
+hamming_dist: 0
+  **Test** Prec@1 88.540 Prec@5 99.540 Error@1 11.460
+actual loss: 0.4614
+iteration Time 1.801 (1.977)
+**********************************
+Iteration: [006/020]   Attack Time 0.230 (0.230)  [2019-11-20 17:22:41]
+loss before attack: 0.2318
+loss after attack: 0.3281
+bit flips: 6
+hamming_dist: 0
+  **Test** Prec@1 87.950 Prec@5 99.540 Error@1 12.050
+actual loss: 0.4950
+iteration Time 1.925 (1.968)
+**********************************
+Iteration: [007/020]   Attack Time 0.215 (0.228)  [2019-11-20 17:22:43]
+loss before attack: 0.3281
+loss after attack: 0.4470
+bit flips: 7
+hamming_dist: 0
+  **Test** Prec@1 86.630 Prec@5 99.530 Error@1 13.370
+actual loss: 0.5686
+iteration Time 1.995 (1.972)
+**********************************
+Iteration: [008/020]   Attack Time 0.220 (0.227)  [2019-11-20 17:22:45]
+loss before attack: 0.4470
+loss after attack: 0.5486
+bit flips: 8
+hamming_dist: 0
+  **Test** Prec@1 85.530 Prec@5 99.500 Error@1 14.470
+actual loss: 0.6370
+iteration Time 2.039 (1.981)
+**********************************
+Iteration: [009/020]   Attack Time 0.230 (0.227)  [2019-11-20 17:22:47]
+loss before attack: 0.5486
+loss after attack: 0.6959
+bit flips: 9
+hamming_dist: 0
+  **Test** Prec@1 83.810 Prec@5 99.320 Error@1 16.190
+actual loss: 0.7422
+iteration Time 2.120 (1.996)
+**********************************
+Iteration: [010/020]   Attack Time 0.210 (0.226)  [2019-11-20 17:22:50]
+loss before attack: 0.6959
+loss after attack: 0.9363
+bit flips: 10
+hamming_dist: 0
+  **Test** Prec@1 81.300 Prec@5 99.080 Error@1 18.700
+actual loss: 0.9164
+iteration Time 2.104 (2.007)
+**********************************
+Iteration: [011/020]   Attack Time 0.228 (0.226)  [2019-11-20 17:22:52]
+loss before attack: 0.9363
+loss after attack: 1.2102
+bit flips: 11
+hamming_dist: 0
+  **Test** Prec@1 77.750 Prec@5 98.960 Error@1 22.250
+actual loss: 1.1725
+iteration Time 2.286 (2.032)
+**********************************
+Iteration: [012/020]   Attack Time 0.232 (0.226)  [2019-11-20 17:22:54]
+loss before attack: 1.2102
+loss after attack: 1.5356
+bit flips: 12
+hamming_dist: 0
+  **Test** Prec@1 75.210 Prec@5 98.780 Error@1 24.790
+actual loss: 1.4043
+iteration Time 2.258 (2.051)
+**********************************
+Iteration: [013/020]   Attack Time 0.217 (0.226)  [2019-11-20 17:22:57]
+loss before attack: 1.5356
+loss after attack: 2.0162
+bit flips: 13
+hamming_dist: 0
+  **Test** Prec@1 69.960 Prec@5 98.030 Error@1 30.040
+actual loss: 1.9389
+iteration Time 2.025 (2.049)
+**********************************
+Iteration: [014/020]   Attack Time 0.215 (0.225)  [2019-11-20 17:22:59]
+loss before attack: 2.0162
+loss after attack: 2.3897
+bit flips: 14
+hamming_dist: 0
+  **Test** Prec@1 65.350 Prec@5 97.270 Error@1 34.650
+actual loss: 2.4727
+iteration Time 2.053 (2.049)
+**********************************
+Iteration: [015/020]   Attack Time 0.234 (0.225)  [2019-11-20 17:23:01]
+loss before attack: 2.3897
+loss after attack: 3.1759
+bit flips: 15
+hamming_dist: 0
+  **Test** Prec@1 56.860 Prec@5 95.630 Error@1 43.140
+actual loss: 3.6760
+iteration Time 2.028 (2.048)
+**********************************
+Iteration: [016/020]   Attack Time 0.220 (0.225)  [2019-11-20 17:23:04]
+loss before attack: 3.1759
+loss after attack: 3.9016
+bit flips: 16
+hamming_dist: 0
+  **Test** Prec@1 49.450 Prec@5 93.680 Error@1 50.550
+actual loss: 4.8709
+iteration Time 2.411 (2.071)
+**********************************
+Iteration: [017/020]   Attack Time 0.205 (0.224)  [2019-11-20 17:23:06]
+loss before attack: 3.9016
+loss after attack: 4.7807
+bit flips: 17
+hamming_dist: 0
+  **Test** Prec@1 43.240 Prec@5 91.500 Error@1 56.760
+actual loss: 5.9788
+iteration Time 1.842 (2.057)
+**********************************
+Iteration: [018/020]   Attack Time 0.201 (0.223)  [2019-11-20 17:23:08]
+loss before attack: 4.7807
+loss after attack: 5.5786
+bit flips: 18
+hamming_dist: 0
+  **Test** Prec@1 39.660 Prec@5 90.820 Error@1 60.340
+actual loss: 7.0225
+iteration Time 2.176 (2.064)
+**********************************
+Iteration: [019/020]   Attack Time 0.196 (0.221)  [2019-11-20 17:23:11]
+loss before attack: 5.5786
+loss after attack: 6.7779
+bit flips: 19
+hamming_dist: 0
+  **Test** Prec@1 34.310 Prec@5 89.310 Error@1 65.690
+actual loss: 8.6816
+iteration Time 2.235 (2.073)
+**********************************
+Iteration: [020/020]   Attack Time 0.217 (0.221)  [2019-11-20 17:23:13]
+loss before attack: 6.7779
+loss after attack: 7.7543
+bit flips: 20
+hamming_dist: 0
+  **Test** Prec@1 30.820 Prec@5 87.570 Error@1 69.180
+actual loss: 9.8837
+iteration Time 1.963 (2.067)
