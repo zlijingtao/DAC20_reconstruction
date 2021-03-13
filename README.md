@@ -27,11 +27,12 @@ If you find this project useful to you, please cite [our work](https://ieeexplor
 * Create Environment from ./environment.yml
   
   
-## Usage
+## Usage 
   
   
-For testing the performance on the pretrained model (with/without weight reconstruction), please use the following command in terminal.
-  
+For getting Fig.7 in the paper, which is to test the resistance to BFA on pretrained model(with/without weight reconstruction), please use the following command in terminal.
+
+
 CIFAR-10:
 ```bash
 bash BFA_attack_test_CIFAR10.sh
@@ -41,7 +42,14 @@ ImageNet:
 ```bash
 bash BFA_attack_test_ImageNet.sh (not yet available, please file an issue if your need this)
 ```
-            
+
+For getting how many number will crush the model (degrade to 10.00% accuracy. a.k.a. BFA stress test):
+
+CIFAR-10:
+```bash
+bash BFA_stress_test_CIFAR10.sh
+```
+
 ############ directory to save result #############
 DATE=`date +%Y-%m-%d`
   
