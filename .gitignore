@@ -6,3 +6,5 @@ dataset/cifar-10-batches-py
 dataset/MNIST
 dataset/*.tar.gz
 __pycache__
+save/2021-03-13
+runs/

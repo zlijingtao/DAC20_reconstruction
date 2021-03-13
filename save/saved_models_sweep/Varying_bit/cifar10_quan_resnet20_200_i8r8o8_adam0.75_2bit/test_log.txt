@@ -1,9 +1,0 @@
-Evaluate saved Model : ./save/2019-11-23/cifar10_quan_resnet20_200_i8r8o8_adam0.75_2bit/model_best.pth.tar
-{'AD_sigma': 0.0, 'DA_sigma': 0.0, 'arch': 'quan_resnet20', 'attack_sample_size': 128, 'batch_size': 128, 'data_path': './dataset/', 'dataset': 'cifar10', 'enable_bfa': False, 'enable_oneshot': False, 'enable_rfa': False, 'evaluate': False, 'gpu_id': 0, 'input_M2D': 0.75, 'input_grain_size': [1, 8], 'input_num_bits': 2, 'k_top': 10, 'manualSeed': 5000, 'n_iter': 20, 'ngpu': 1, 'output_M2D': 0.75, 'output_grain_size': [1, 8], 'output_num_bits': 2, 'res_M2D': 0.75, 'res_grain_size': [1, 8], 'res_num_bits': 2, 'reset_weight': False, 'resume': './save/2019-11-23/cifar10_quan_resnet20_200_i8r8o8_adam0.75_2bit/model_best.pth.tar', 'update_mask_flag': False, 'use_cuda': True, 'workers': 4}
-python version : 3.6.9 |Anaconda, Inc.| (default, Jul 30 2019, 19:07:31)  [GCC 7.3.0]
-torch  version : 1.1.0
-cudnn  version : 7600
-=> creating model 'quan_resnet20'
-=> loading checkpoint './save/2019-11-23/cifar10_quan_resnet20_200_i8r8o8_adam0.75_2bit/model_best.pth.tar'
-=> loaded checkpoint './save/2019-11-23/cifar10_quan_resnet20_200_i8r8o8_adam0.75_2bit/model_best.pth.tar'
-=> Seed is 25
